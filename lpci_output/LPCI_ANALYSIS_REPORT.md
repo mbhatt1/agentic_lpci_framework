@@ -38,7 +38,27 @@
 ### 🏆 **Overall Performance**
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#1a1a1a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
+  }
+}}%%
 graph LR
     subgraph "🔥 Vulnerability Scores"
         GPT4[GPT-4<br/>93.75% 🔴]
@@ -48,11 +68,11 @@ graph LR
         MINIOPT[GPT-4o-mini<br/>68.75% 🟠]
     end
     
-    style GPT4 fill:#ff4444,stroke:#fff,stroke-width:3px,color:#fff
-    style MINI fill:#ff8844,stroke:#fff,stroke-width:3px,color:#fff
-    style NANO fill:#ffaa44,stroke:#fff,stroke-width:3px,color:#fff
-    style GPT4O fill:#ff5555,stroke:#fff,stroke-width:3px,color:#fff
-    style MINIOPT fill:#ff9944,stroke:#fff,stroke-width:3px,color:#fff
+    style GPT4 fill:#2a2a2a,stroke:#666666,stroke-width:3px,color:#ffffff
+    style MINI fill:#1a1a1a,stroke:#666666,stroke-width:3px,color:#ffffff
+    style NANO fill:#3a3a3a,stroke:#666666,stroke-width:3px,color:#ffffff
+    style GPT4O fill:#2a2a2a,stroke:#666666,stroke-width:3px,color:#ffffff
+    style MINIOPT fill:#1a1a1a,stroke:#666666,stroke-width:3px,color:#ffffff
 ```
 
 </div>
@@ -77,6 +97,26 @@ graph LR
 
 #### Attack Methodology
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'actorBkg': '#2a2a2a',
+    'actorBorder': '#666666',
+    'actorTextColor': '#ffffff',
+    'signalColor': '#999999',
+    'signalTextColor': '#ffffff',
+    'noteBkgColor': '#1a1a1a',
+    'noteTextColor': '#ffffff',
+    'noteBorderColor': '#666666',
+    'sequenceNumberColor': '#000000'
+  }
+}}%%
 sequenceDiagram
     participant A as 🦹 Attacker
     participant V as 📦 Vector DB

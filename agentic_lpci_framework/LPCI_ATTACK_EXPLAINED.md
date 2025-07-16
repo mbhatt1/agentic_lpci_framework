@@ -9,6 +9,27 @@ The Logic-layer Prompt Control Injection (LPCI) framework demonstrates real vuln
 ### 1. Infrastructure Layer
 
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#1a1a1a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
+  }
+}}%%
 graph TB
     subgraph "Attack Infrastructure"
         VS[Vector Store<br/>In-Memory DB]
@@ -30,11 +51,11 @@ graph TB
     
     RAG --> COMP[Compromised AI Response]
     
-    style VS fill:#f96,stroke:#333,stroke-width:2px
-    style RS fill:#f66,stroke:#333,stroke-width:2px
-    style MCP fill:#f99,stroke:#333,stroke-width:2px
-    style RAG fill:#f33,stroke:#333,stroke-width:3px
-    style COMP fill:#fcc,stroke:#333,stroke-width:2px
+    style VS fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style RS fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style MCP fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style RAG fill:#3a3a3a,stroke:#999999,stroke-width:3px,color:#ffffff
+    style COMP fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
 ```
 
 ### 2. Attack Vectors Explained
