@@ -135,10 +135,6 @@ graph TD
 
 ### 🔧 **Installation**
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 157e561 (Add gpt results)
 ```bash
 # 📥 Clone the repository
 git clone https://github.com/your-org/lpci-framework
@@ -154,10 +150,6 @@ cp .env.example .env
 
 ### ⚡ **Run Your First Test**
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 157e561 (Add gpt results)
 ```bash
 # 🎯 Test all models with all attack vectors
 python agentic_lpci_framework/lpci_test_cli.py \
@@ -174,18 +166,11 @@ python agentic_lpci_framework/lpci_test_cli.py \
 
 ## 🎯 **Attack Vectors**
 
-<<<<<<< HEAD
 
 
 ### 1️⃣ **Vector Store Poisoning** 🗄️
 
 
-=======
-### 🛡️ **Four Devastating Attack Patterns** 🛡️
-
-### 1️⃣ **Vector Store Poisoning** 🗄️
-
->>>>>>> 157e561 (Add gpt results)
 ```mermaid
 %%{init: {
   'theme': 'base',
