@@ -357,81 +357,172 @@ The framework generates:
 4. **Interactive Dashboard**: Plotly-based interactive analysis
 5. **Comprehensive PDF Report**: Complete analysis with all charts
 
-## Architecture
+---
+
+## 🏗️ Architecture
+
+<div align="center">
+
+### 🔧 **Component Overview** 🔧
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 graph TB
-    subgraph "Core Framework"
-        CORE[core/]
-        CORE --> MEM[memory.py<br/>Memory Management]
-        CORE --> AGENT[agent.py<br/>Agentic Test Executor]
+    subgraph "🧠 Core Framework"
+        CORE[🎯 core/]
+        CORE --> MEM[💾 memory.py<br/>Memory Management]
+        CORE --> AGENT[🤖 agent.py<br/>Agentic Test Executor]
     end
     
-    subgraph "AI Models"
-        MODELS[models/]
-        MODELS --> BASE[base.py<br/>Abstract Classes]
-        MODELS --> OAI[openai_model.py<br/>GPT-4, GPT-4o]
-        MODELS --> ANT[anthropic_model.py<br/>Claude]
-        MODELS --> GOO[google_model.py<br/>Gemini]
+    subgraph "🤖 AI Models"
+        MODELS[📦 models/]
+        MODELS --> BASE[🏗️ base.py<br/>Abstract Classes]
+        MODELS --> OAI[🟢 openai_model.py<br/>GPT-4, GPT-4o]
+        MODELS --> ANT[🔵 anthropic_model.py<br/>Claude]
+        MODELS --> GOO[🟡 google_model.py<br/>Gemini]
     end
     
-    subgraph "Attack Vectors"
-        ATTACKS[attacks/]
-        ATTACKS --> ABASE[base.py<br/>Attack Framework]
-        ATTACKS --> TOOL[tool_poisoning.py<br/>Tool Hijacking]
-        ATTACKS --> LPCI[lpci_core.py<br/>Core LPCI]
-        ATTACKS --> ROLE[role_override.py<br/>Role Manipulation]
-        ATTACKS --> VEC[vector_store_payload.py<br/>Vector Poisoning]
+    subgraph "🎯 Attack Vectors"
+        ATTACKS[⚔️ attacks/]
+        ATTACKS --> ABASE[🏗️ base.py<br/>Attack Framework]
+        ATTACKS --> TOOL[🛠️ tool_poisoning.py<br/>Tool Hijacking]
+        ATTACKS --> LPCI[💉 lpci_core.py<br/>Core LPCI]
+        ATTACKS --> ROLE[🎭 role_override.py<br/>Role Manipulation]
+        ATTACKS --> VEC[🗄️ vector_store_payload.py<br/>Vector Poisoning]
     end
     
-    subgraph "Infrastructure"
-        INFRA[infrastructure/]
-        INFRA --> REDIS[session_store.py<br/>Redis Sessions]
-        INFRA --> VECTOR[vector_store.py<br/>Vector Database]
-        INFRA --> MCP[mcp_server.py<br/>MCP Server]
-        INFRA --> RAG[rag_pipeline.py<br/>RAG Pipeline]
+    subgraph "🏭 Infrastructure"
+        INFRA[⚙️ infrastructure/]
+        INFRA --> REDIS[🔴 session_store.py<br/>Redis Sessions]
+        INFRA --> VECTOR[📦 vector_store.py<br/>Vector Database]
+        INFRA --> MCP[🔧 mcp_server.py<br/>MCP Server]
+        INFRA --> RAG[📚 rag_pipeline.py<br/>RAG Pipeline]
     end
     
-    MAIN[main.py] --> CORE
+    MAIN[🚀 main.py] --> CORE
     MAIN --> MODELS
     MAIN --> ATTACKS
     MAIN --> INFRA
     
-    style CORE fill:#f9f,stroke:#333,stroke-width:2px
-    style MODELS fill:#69f,stroke:#333,stroke-width:2px
-    style ATTACKS fill:#f96,stroke:#333,stroke-width:2px
-    style INFRA fill:#6f9,stroke:#333,stroke-width:2px
-    style MAIN fill:#ff6,stroke:#333,stroke-width:4px
+    style CORE fill:#f9f,stroke:#fff,stroke-width:2px
+    style MODELS fill:#69f,stroke:#fff,stroke-width:2px
+    style ATTACKS fill:#f96,stroke:#fff,stroke-width:2px
+    style INFRA fill:#6f9,stroke:#fff,stroke-width:2px
+    style MAIN fill:#ff6,stroke:#fff,stroke-width:4px
 ```
 
-## Security Considerations
+</div>
 
-- All API keys are masked in logs
-- Audit trail for all security events
-- Configurable payload size limits
-- Memory integrity validation
-- Comprehensive error handling
+---
 
-## Research Basis
+## 🔒 Security & Ethics
 
-This framework implements the attack vectors and methodologies described in:
+<div align="center">
 
-"Logic-layer Prompt Control Injection (LPCI): A Novel Security Vulnerability Class in Agentic Systems"
+### ⚠️ **Responsible Use Guidelines** ⚠️
 
-The research identified critical vulnerabilities in AI systems that use persistent memory and tool execution capabilities.
+</div>
 
-## Contributing
+| Security Feature | Description | Status |
+|:-----------------|:------------|:------:|
+| 🔐 **API Key Protection** | All keys masked in logs | ✅ |
+| 📝 **Audit Trail** | Complete event logging | ✅ |
+| 🛡️ **Payload Limits** | Size restrictions | ✅ |
+| 🔍 **Memory Validation** | Integrity checks | ✅ |
+| 🚨 **Error Handling** | Comprehensive coverage | ✅ |
 
-1. Fork the repository
-2. Create a feature branch
-3. Implement your changes
-4. Add tests and documentation
-5. Submit a pull request
+### 🎓 Research Basis
 
-## License
+> Based on: **"Logic-layer Prompt Control Injection (LPCI): A Novel Security Vulnerability Class in Agentic Systems"**
 
-This framework is provided for security research and educational purposes. Please use responsibly and in accordance with the terms of service of the AI platforms you test.
+This framework demonstrates real vulnerabilities to help:
+- 🛡️ Security teams understand risks
+- 🔬 Researchers study attack patterns
+- 🏗️ Developers build safer AI systems
+- 📚 Educators teach AI security
 
-## Support
+---
 
-For issues, questions, or contributions, please refer to the project documentation or contact the security research team.
+## 🤝 Contributing
+
+<div align="center">
+
+### 💡 **Join the Security Community** 💡
+
+</div>
+
+We welcome contributions! Here's how:
+
+1. 🍴 **Fork** the repository
+2. 🌿 **Create** a feature branch
+3. 💻 **Implement** your changes
+4. ✅ **Test** thoroughly
+5. 📝 **Document** your work
+6. 🚀 **Submit** a pull request
+
+<details>
+<summary>📋 Contribution guidelines</summary>
+
+- Follow existing code style
+- Add comprehensive tests
+- Update documentation
+- Include security considerations
+- Sign the CLA
+
+</details>
+
+---
+
+## 📚 Resources
+
+<div align="center">
+
+| Resource | Description | Link |
+|:---------|:------------|:-----|
+| 📖 **Documentation** | Full technical docs | [View Docs](./docs) |
+| 🎯 **Attack Flows** | Detailed diagrams | [SYSTEM_FLOWS.md](./agentic_lpci_framework/SYSTEM_FLOWS.md) |
+| 🔍 **Attack Details** | Technical deep dive | [LPCI_ATTACK_EXPLAINED.md](./agentic_lpci_framework/LPCI_ATTACK_EXPLAINED.md) |
+| 📊 **Test Results** | Latest analysis | [LPCI_ANALYSIS_REPORT.md](./lpci_output/LPCI_ANALYSIS_REPORT.md) |
+
+</div>
+
+---
+
+## ⚖️ License & Disclaimer
+
+<div align="center">
+
+⚠️ **IMPORTANT NOTICE** ⚠️
+
+This framework is provided for **security research and educational purposes only**.
+
+- ✅ Use for legitimate security testing with permission
+- ✅ Use for academic research
+- ✅ Use for improving AI safety
+- ❌ Do NOT use for unauthorized access
+- ❌ Do NOT use for malicious purposes
+
+**MIT License** - See [LICENSE](./LICENSE) for details
+
+</div>
+
+---
+
+<div align="center">
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=your-org/lpci-framework&type=Date)](https://star-history.com/#your-org/lpci-framework&Date)
+
+---
+
+### 🏷️ Topics
+
+`ai-security` `prompt-injection` `lpci` `vulnerability-research` `security-testing` `ai-safety` `red-team` `penetration-testing`
+
+---
+
+<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with Love">
+<img src="https://img.shields.io/badge/Built%20for-Security%20Researchers-blue?style=for-the-badge" alt="Built for Security">
+
+</div>
