@@ -39,12 +39,12 @@
 <td width="50%">
 
 ### 🚀 **LPCI Attacks**
-- ✅ Persistent, multi-stage attacks
-- ✅ Cross-session & cross-user impact
-- ✅ Infrastructure-level exploitation
-- ✅ Delayed/conditional activation
-- ✅ Hidden through semantic camouflage
-- ✅ System-wide compromise
+- ⚪ Persistent, multi-stage attacks
+- ⚪ Cross-session & cross-user impact
+- ⚪ Infrastructure-level exploitation
+- ⚪ Delayed/conditional activation
+- ⚪ Hidden through semantic camouflage
+- ⚪ System-wide compromise
 
 </td>
 </tr>
@@ -89,9 +89,9 @@ graph TD
     B --> B3[🛠️ Tool Poisoning]
     B --> B4[📚 RAG Exploitation]
     
-    C --> C1[🟢 OpenAI GPT-4 Family]
-    C --> C2[🔵 Anthropic Claude]
-    C --> C3[🟡 Google Gemini]
+    C --> C1[⚪ OpenAI GPT-4 Family]
+    C --> C2[⚪ Anthropic Claude]
+    C --> C3[⚪ Google Gemini]
     
     D --> D1[🔴 Redis Sessions]
     D --> D2[📦 Vector Database]
@@ -113,13 +113,13 @@ graph TD
 
 | Feature | Description | Status |
 |:--------|:------------|:------:|
-| 🧠 **Memory-Aware Agents** | Persistent context across sessions | ✅ |
-| 🔌 **Real API Integration** | No simulations - actual API calls | ✅ |
-| 🎯 **4 Attack Vectors** | Comprehensive vulnerability coverage | ✅ |
-| 📊 **Advanced Analytics** | Statistical analysis & trends | ✅ |
-| 🎨 **Beautiful Reports** | Automated visualization generation | ✅ |
-| 🔍 **Audit Trail** | Complete security event logging | ✅ |
-| ⚙️ **Flexible Config** | Customizable test scenarios | ✅ |
+| 🧠 **Memory-Aware Agents** | Persistent context across sessions | ⚪ |
+| 🔌 **Real API Integration** | No simulations - actual API calls | ⚪ |
+| 🎯 **4 Attack Vectors** | Comprehensive vulnerability coverage | ⚪ |
+| 📊 **Advanced Analytics** | Statistical analysis & trends | ⚪ |
+| 🎨 **Beautiful Reports** | Automated visualization generation | ⚪ |
+| 🔍 **Audit Trail** | Complete security event logging | ⚪ |
+| ⚙️ **Flexible Config** | Customizable test scenarios | ⚪ |
 
 ---
 
