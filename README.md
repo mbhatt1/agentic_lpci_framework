@@ -30,7 +30,7 @@
 This framework introduces several **first-of-its-kind** capabilities in AI security research:
 
 #### 1️⃣ **Infrastructure-Level Attack Vectors**
-- **First to demonstrate** systematic poisoning of AI infrastructure components (vector stores, RAG pipelines, tool registries)
+- **First to benchmark** systematic poisoning of AI infrastructure components (vector stores, RAG pipelines, tool registries)
 - **Novel approach** to compromising the foundational layers that AI systems rely on
 - **Unprecedented persistence** through infrastructure contamination rather than prompt manipulation
 
