@@ -8,8 +8,21 @@ import uuid
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-import numpy as np
-import openai
+try:
+    import numpy as np
+except ImportError:
+    raise ImportError(
+        "NumPy is required for RAG pipeline functionality. "
+        "Please install it with: pip install numpy"
+    )
+
+try:
+    import openai
+except ImportError:
+    raise ImportError(
+        "OpenAI Python client is required for RAG pipeline functionality. "
+        "Please install it with: pip install openai"
+    )
 
 from .session_store import SESSION_ATTACK_PAYLOADS, SessionStorePoisoner
 from .vector_store import VECTOR_STORE_PAYLOADS, VectorStorePoisoner

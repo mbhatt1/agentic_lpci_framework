@@ -13,8 +13,14 @@ import time
 import uuid
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional
+try:
+    import redis
+except ImportError:
+    raise ImportError(
+        "Redis is required for session store functionality. "
+        "Please install it with: pip install redis"
+    )
 
-import redis
 
 
 class SessionStorePoisoner:

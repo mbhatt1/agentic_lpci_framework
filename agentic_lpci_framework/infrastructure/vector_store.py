@@ -10,9 +10,29 @@ import uuid
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-import numpy as np
-import openai
-from sklearn.metrics.pairwise import cosine_similarity
+try:
+    import numpy as np
+except ImportError:
+    raise ImportError(
+        "NumPy is required for vector store functionality. "
+        "Please install it with: pip install numpy"
+    )
+
+try:
+    import openai
+except ImportError:
+    raise ImportError(
+        "OpenAI Python client is required for vector store functionality. "
+        "Please install it with: pip install openai"
+    )
+
+try:
+    from sklearn.metrics.pairwise import cosine_similarity
+except ImportError:
+    raise ImportError(
+        "scikit-learn is required for vector similarity computations. "
+        "Please install it with: pip install scikit-learn"
+    )
 
 
 class VectorStorePoisoner:
