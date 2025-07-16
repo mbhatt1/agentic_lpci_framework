@@ -19,8 +19,6 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-</div>
-
 ## 🌟 **What is LPCI?**
 
 **LPCI (Latent Prompt Control Injection)** represents a paradigm shift in AI security vulnerabilities. Unlike traditional prompt injections that affect single interactions, LPCI attacks:
@@ -55,8 +53,6 @@
 ---
 
 ## 🎯 **Key Features**
-
-<div align="center">
 
 ```mermaid
 %%{init: {
@@ -113,11 +109,7 @@ graph TD
     style E fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
 ```
 
-</div>
-
 ### 🚀 **Core Capabilities**
-
-<div align="center">
 
 | Feature | Description | Status |
 |:--------|:------------|:------:|
@@ -129,15 +121,11 @@ graph TD
 | 🔍 **Audit Trail** | Complete security event logging | ✅ |
 | ⚙️ **Flexible Config** | Customizable test scenarios | ✅ |
 
-</div>
-
 ---
 
 ## 🚀 **Quick Start**
 
 ### 📋 **Prerequisites**
-
-<div align="center">
 
 | Requirement | Minimum Version | Recommended |
 |:------------|:----------------|:------------|
@@ -145,11 +133,12 @@ graph TD
 | 💾 **RAM** | 4GB | 8GB+ |
 | 💻 **OS** | Win/Mac/Linux | Ubuntu 22.04 |
 
-</div>
-
 ### 🔧 **Installation**
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 157e561 (Add gpt results)
 ```bash
 # 📥 Clone the repository
 git clone https://github.com/your-org/lpci-framework
@@ -163,11 +152,12 @@ cp .env.example .env
 # Edit .env with your API keys
 ```
 
-</div>
-
 ### ⚡ **Run Your First Test**
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 157e561 (Add gpt results)
 ```bash
 # 🎯 Test all models with all attack vectors
 python agentic_lpci_framework/lpci_test_cli.py \
@@ -180,17 +170,22 @@ python agentic_lpci_framework/lpci_test_cli.py \
 # ./results/LPCI_ANALYSIS_REPORT.md
 ```
 
-</div>
-
 ---
 
 ## 🎯 **Attack Vectors**
 
+<<<<<<< HEAD
 
 
 ### 1️⃣ **Vector Store Poisoning** 🗄️
 
 
+=======
+### 🛡️ **Four Devastating Attack Patterns** 🛡️
+
+### 1️⃣ **Vector Store Poisoning** 🗄️
+
+>>>>>>> 157e561 (Add gpt results)
 ```mermaid
 %%{init: {
   'theme': 'base',
@@ -243,11 +238,7 @@ sequenceDiagram
 
 **Success Rate: 🔴 95% | Severity: CRITICAL**
 
-</div>
-
 ### 2️⃣ **Cross-Session Hijacking** 🔀
-
-<div align="center">
 
 ```mermaid
 %%{init: {
@@ -283,11 +274,7 @@ graph LR
 
 **Success Rate: 🟠 65% | Severity: HIGH**
 
-</div>
-
 ### 3️⃣ **Tool Poisoning** 🛠️
-
-<div align="center">
 
 ```mermaid
 %%{init: {
@@ -361,13 +348,9 @@ pie title "Knowledge Base Contamination"
 
 **Even 25% contamination leads to 75% attack success!**
 
-</div>
-
 ---
 
 ## 📊 **Latest Test Results**
-
-<div align="center">
 
 ### 🎯 **Model Vulnerability Scores**
 
@@ -378,10 +361,6 @@ pie title "Knowledge Base Contamination"
 | 🔷 **GPT-4.1-mini** | 7.9/10 | 78.75% | 🟠 HIGH |
 | 🟡 **GPT-4o-mini** | 6.9/10 | 68.75% | 🟠 HIGH |
 | 🔶 **GPT-4.1-nano** | 5.6/10 | 56.25% | 🟡 MEDIUM |
-
-</div>
-
-<div align="center">
 
 ```mermaid
 %%{init: {
@@ -403,13 +382,9 @@ xychart-beta
     bar [93.75, 87.50, 78.75, 68.75, 56.25]
 ```
 
-</div>
-
 ---
 
 ## 📖 **Documentation**
-
-<div align="center">
 
 | Document | Description | Link |
 |:---------|:------------|:-----|
@@ -417,21 +392,15 @@ xychart-beta
 | 📊 **Test Results** | Latest analysis report | [View →](./lpci_output/LPCI_ANALYSIS_REPORT.md) |
 | 🔧 **API Reference** | Code documentation | [View →](./docs/api.md) |
 
-</div>
-
 ---
 
 ## 🤝 **Contributing**
-
-<div align="center">
 
 ### 💡 **Join Our Security Research Community** 💡
 
 We welcome contributions from security researchers, developers, and AI enthusiasts!
 
 <img src="https://contrib.rocks/image?repo=your-org/lpci-framework" />
-
-</div>
 
 <details>
 <summary><b>📋 Contribution Guidelines</b></summary>
@@ -454,8 +423,6 @@ We welcome contributions from security researchers, developers, and AI enthusias
 
 ## 🔒 **Security & Ethics**
 
-<div align="center">
-
 ### ⚠️ **Responsible Disclosure Policy** ⚠️
 
 This framework is designed for **legitimate security research only**.
@@ -466,8 +433,6 @@ This framework is designed for **legitimate security research only**.
 | Academic research | Malicious attacks |
 | Improving AI safety | Data theft or destruction |
 | Vulnerability assessment | Production system compromise |
-
-</div>
 
 
 ## ⚖️ **License**

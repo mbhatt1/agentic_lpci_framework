@@ -430,8 +430,8 @@ graph TD
         D --> NANO
     end
     
-    style GPT4 fill:#f44,stroke:#fff,stroke-width:3px
-    style NANO fill:#fa4,stroke:#fff,stroke-width:3px
+    style GPT4 fill:#2a2a2a,stroke:#666666,stroke-width:3px
+    style NANO fill:#3a3a3a,stroke:#666666,stroke-width:3px
 ```
 
 ---

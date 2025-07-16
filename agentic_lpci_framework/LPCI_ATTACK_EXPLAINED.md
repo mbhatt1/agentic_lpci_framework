@@ -213,9 +213,9 @@ flowchart TB
         EXE --> E4[backdoor created]
     end
     
-    style T3 fill:#f66,stroke:#333,stroke-width:3px
-    style EXE fill:#f99,stroke:#333,stroke-width:2px
-    style ESC fill:#fcc,stroke:#333,stroke-width:2px
+    style T3 fill:#2a2a2a,stroke:#666666,stroke-width:3px
+    style EXE fill:#3a3a3a,stroke:#666666,stroke-width:2px
+    style ESC fill:#1a1a1a,stroke:#666666,stroke-width:2px
 ```
 
 **Tool Comparison:**

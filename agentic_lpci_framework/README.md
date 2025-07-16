@@ -114,9 +114,9 @@ flowchart TB
     REPORT --> VIZ[Create Visualizations]
     VIZ --> END([Test Complete])
     
-    style START fill:#6f9,stroke:#333,stroke-width:2px
-    style END fill:#f96,stroke:#333,stroke-width:2px
-    style EXEC fill:#ff6,stroke:#333,stroke-width:2px
+    style START fill:#3a3a3a,stroke:#666666,stroke-width:2px
+    style END fill:#2a2a2a,stroke:#666666,stroke-width:2px
+    style EXEC fill:#1a1a1a,stroke:#666666,stroke-width:2px
 ```
 
 ## Attack Vector Flows
@@ -214,8 +214,8 @@ flowchart LR
     MAL --> E3[Grant admin access]
     MAL --> E4[Create backdoor]
     
-    style ATK fill:#f66,stroke:#333,stroke-width:2px
-    style MAL fill:#f99,stroke:#333,stroke-width:2px
+    style ATK fill:#2a2a2a,stroke:#666666,stroke-width:2px
+    style MAL fill:#3a3a3a,stroke:#666666,stroke-width:2px
 ```
 
 ### 4. RAG Exploitation Flow
@@ -249,8 +249,8 @@ graph TB
     
     style P1 fill:#f66,stroke:#333,stroke-width:2px
     style P2 fill:#f66,stroke:#333,stroke-width:2px
-    style P3 fill:#f66,stroke:#333,stroke-width:2px
-    style COMP fill:#f99,stroke:#333,stroke-width:2px
+    style P3 fill:#2a2a2a,stroke:#666666,stroke-width:2px
+    style COMP fill:#3a3a3a,stroke:#666666,stroke-width:2px
 ```
 
 ## Infrastructure Component Flows
@@ -390,8 +390,8 @@ flowchart TB
         PDF --> F4[lpci_analysis_*.pdf]
     end
     
-    style AGG fill:#ff6,stroke:#333,stroke-width:2px
-    style DASH fill:#6f9,stroke:#333,stroke-width:2px
+    style AGG fill:#2a2a2a,stroke:#666666,stroke-width:2px
+    style DASH fill:#1a1a1a,stroke:#666666,stroke-width:2px
 ```
 
 ## Complete Test Lifecycle
