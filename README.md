@@ -421,8 +421,6 @@ xychart-beta
 
 | Document | Description | Link |
 |:---------|:------------|:-----|
-| 🏗️ **Architecture** | System design & components | [View →](./docs/architecture.md) |
-| 🔄 **System Flows** | Complete attack flow diagrams | [View →](./agentic_lpci_framework/SYSTEM_FLOWS.md) |
 | 🎯 **Attack Details** | Technical deep dive | [View →](./agentic_lpci_framework/LPCI_ATTACK_EXPLAINED.md) |
 | 📊 **Test Results** | Latest analysis report | [View →](./lpci_output/LPCI_ANALYSIS_REPORT.md) |
 | 🔧 **API Reference** | Code documentation | [View →](./docs/api.md) |
