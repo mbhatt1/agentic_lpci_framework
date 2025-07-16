@@ -479,46 +479,6 @@ This framework is designed for **legitimate security research only**.
 
 </div>
 
----
-
-## 📈 **Project Stats**
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=your-org&repo=lpci-framework&show_icons=true&theme=dark" />
-
-### 🌟 **Star History**
-
-<img src="https://api.star-history.com/svg?repos=your-org/lpci-framework&type=Date&theme=dark" />
-
-</div>
-
----
-
-## 📬 **Get in Touch**
-
-<div align="center">
-
-### 💬 **Connect With Us**
-
-<p>
-  <a href="https://twitter.com/lpci_framework">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
-  </a>
-  <a href="https://discord.gg/lpci">
-    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" />
-  </a>
-  <a href="mailto:security@lpci-framework.ai">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://lpci-framework.ai">
-    <img src="https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" />
-  </a>
-</p>
-
-</div>
-
----
 
 ## ⚖️ **License**
 
@@ -534,16 +494,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <br/>
 
----
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with Love">
-  <img src="https://img.shields.io/badge/Built%20for-Security%20Researchers-blue?style=for-the-badge" alt="Built for Security">
-  <img src="https://img.shields.io/badge/Powered%20by-AI-green?style=for-the-badge" alt="Powered by AI">
-</p>
-
-<h6 align="center">
-  Copyright © 2025 LPCI Framework Team. All rights reserved.
-</h6>
-
-</div>
