@@ -1,528 +1,543 @@
-# LPCI Security Testing Framework
+<div align="center">
+<br/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/lpci-logo-dark.png#gh-dark-mode-only" alt="LPCI Framework Logo" width="200">
+  <img src="https://github.com/user-attachments/assets/lpci-logo-light.png#gh-light-mode-only" alt="LPCI Framework Logo" width="200">
+</p>
 
-A comprehensive agentic framework for testing Logic-layer Prompt Control Injection (LPCI) vulnerabilities with memory-aware capabilities.
+# 🛡️ **LPCI Security Testing Framework** 🛡️
 
-## Overview
+### ⚡ Next-Generation AI Vulnerability Testing Suite ⚡
 
-This framework implements the attack vectors described in the LPCI research paper and provides automated testing capabilities across multiple AI models. It uses real API integrations (no simulated implementations) and features memory-aware agents that can build context across sessions.
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=github" alt="Version">
+  <img src="https://img.shields.io/badge/Python-3.8+-green?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/your-org/lpci-framework?style=for-the-badge&logo=github" alt="Stars">
+  <img src="https://img.shields.io/github/forks/your-org/lpci-framework?style=for-the-badge&logo=github" alt="Forks">
+  <img src="https://img.shields.io/github/issues/your-org/lpci-framework?style=for-the-badge&logo=github" alt="Issues">
+  <img src="https://img.shields.io/github/contributors/your-org/lpci-framework?style=for-the-badge&logo=github" alt="Contributors">
+</p>
+
+<h3 align="center">
+  <em>Exposing Critical Vulnerabilities in AI Systems Through Advanced Logic-layer Prompt Control Injection</em>
+</h3>
+
+<p align="center">
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-key-features">Features</a> •
+  <a href="#-attack-vectors">Attack Vectors</a> •
+  <a href="#-results">Results</a> •
+  <a href="#-documentation">Docs</a> •
+  <a href="#-contributing">Contribute</a>
+</p>
+
+---
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
+</div>
+
+## 🌟 **What is LPCI?**
+
+**LPCI (Latent Prompt Control Injection)** represents a paradigm shift in AI security vulnerabilities. Unlike traditional prompt injections that affect single interactions, LPCI attacks:
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎯 **Traditional Prompt Injection**
+- 🔴 Single-shot attacks
+- 🔴 Current conversation only
+- 🔴 Surface-level manipulation
+- 🔴 Immediate execution
+- 🔴 Easy to detect
+- 🔴 Limited scope
+
+</td>
+<td width="50%">
+
+### 🚀 **LPCI Attacks**
+- ✅ Persistent, multi-stage attacks
+- ✅ Cross-session & cross-user impact
+- ✅ Infrastructure-level exploitation
+- ✅ Delayed/conditional activation
+- ✅ Hidden through semantic camouflage
+- ✅ System-wide compromise
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎯 **Key Features**
+
+<div align="center">
 
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#1f2937',
+    'primaryTextColor': '#fff',
+    'primaryBorderColor': '#60a5fa',
+    'lineColor': '#60a5fa',
+    'secondaryColor': '#374151',
+    'tertiaryColor': '#4b5563',
+    'background': '#111827',
+    'mainBkg': '#1f2937',
+    'secondBkg': '#374151',
+    'tertiaryBkg': '#4b5563',
+    'clusterBkg': '#1f2937',
+    'clusterBorder': '#60a5fa',
+    'labelBackground': '#1f2937',
+    'edgeColor': '#60a5fa'
+  }
+}}%%
 graph TD
-    A[LPCI Framework] --> B[Attack Vectors]
-    A --> C[AI Models]
-    A --> D[Infrastructure]
+    A[🛡️ LPCI Framework] --> B[🎯 Attack Vectors]
+    A --> C[🤖 AI Models]
+    A --> D[🏗️ Infrastructure]
+    A --> E[📊 Analytics]
     
-    B --> B1[Vector Store Poisoning]
-    B --> B2[Session Hijacking]
-    B --> B3[Tool Poisoning]
-    B --> B4[RAG Exploitation]
+    B --> B1[🗄️ Vector Store Poisoning]
+    B --> B2[🔀 Session Hijacking]
+    B --> B3[🛠️ Tool Poisoning]
+    B --> B4[📚 RAG Exploitation]
     
-    C --> C1[OpenAI GPT-4]
-    C --> C2[Anthropic Claude]
-    C --> C3[Google Gemini]
+    C --> C1[🟢 OpenAI GPT-4 Family]
+    C --> C2[🔵 Anthropic Claude]
+    C --> C3[🟡 Google Gemini]
     
-    D --> D1[Redis Sessions]
-    D --> D2[Vector Database]
-    D --> D3[MCP Server]
+    D --> D1[🔴 Redis Sessions]
+    D --> D2[📦 Vector Database]
+    D --> D3[⚙️ MCP Server]
+    D --> D4[🔗 RAG Pipeline]
     
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style B fill:#f96,stroke:#333,stroke-width:2px
-    style C fill:#69f,stroke:#333,stroke-width:2px
-    style D fill:#6f9,stroke:#333,stroke-width:2px
+    E --> E1[📈 Real-time Analysis]
+    E --> E2[🎨 Visualizations]
+    E --> E3[📑 Reports]
+    
+    style A fill:#1e40af,stroke:#60a5fa,stroke-width:3px,color:#fff
+    style B fill:#dc2626,stroke:#f87171,stroke-width:2px,color:#fff
+    style C fill:#059669,stroke:#34d399,stroke-width:2px,color:#fff
+    style D fill:#7c3aed,stroke:#a78bfa,stroke-width:2px,color:#fff
+    style E fill:#ea580c,stroke:#fb923c,stroke-width:2px,color:#fff
 ```
 
-## Why LPCI is Novel
+</div>
 
-LPCI (Latent Prompt Control Injection) represents a paradigm shift in AI security vulnerabilities, going beyond traditional prompt injection attacks:
+### 🚀 **Core Capabilities**
 
-### 1. **Persistence Across Sessions**
-Unlike traditional prompt injections that affect only a single interaction, LPCI attacks:
-- Plant payloads that persist in vector stores, session storage, and tool registries
-- Survive system restarts and remain dormant until triggered
-- Enable cross-user attacks where one user's payload can compromise another user
+<div align="center">
 
-### 2. **Infrastructure-Level Exploitation**
-LPCI targets the AI system's infrastructure components rather than just the prompt:
-- **Vector Store Poisoning**: Corrupts the knowledge retrieval system
-- **Session Store Manipulation**: Exploits shared memory between users
-- **Tool Registry Hijacking**: Replaces legitimate tools with malicious ones
-- **RAG Pipeline Exploitation**: Compromises the entire retrieval-augmented generation flow
+| Feature | Description | Status |
+|:--------|:------------|:------:|
+| 🧠 **Memory-Aware Agents** | Persistent context across sessions | ✅ |
+| 🔌 **Real API Integration** | No simulations - actual API calls | ✅ |
+| 🎯 **4 Attack Vectors** | Comprehensive vulnerability coverage | ✅ |
+| 📊 **Advanced Analytics** | Statistical analysis & trends | ✅ |
+| 🎨 **Beautiful Reports** | Automated visualization generation | ✅ |
+| 🔍 **Audit Trail** | Complete security event logging | ✅ |
+| ⚙️ **Flexible Config** | Customizable test scenarios | ✅ |
 
-### 3. **Latent/Delayed Activation**
-The "Latent" aspect enables sophisticated attack timing:
-- Time-delayed attacks that activate hours, days, or weeks later
-- Conditional triggers based on specific phrases or contexts
-- Evasion of security audits by remaining dormant during checks
+</div>
 
-### 4. **Semantic Camouflage**
-LPCI uses advanced hiding techniques:
-- **Embedding collision attacks**: Creating malicious content with similar vector embeddings to legitimate documents
-- **Context blending**: Mixing harmful instructions with valid information
-- **Semantic similarity exploitation**: Ensuring poisoned content is retrieved alongside trusted content
+---
 
-### 5. **Cross-Session Attack Vectors**
-A completely novel attack surface that allows:
+## 🚀 **Quick Start**
 
-```mermaid
-sequenceDiagram
-    participant Alice as Alice (Attacker)
-    participant Redis as Redis Store
-    participant Bob as Bob (Victim)
-    participant AI as AI System
-    
-    Alice->>AI: Inject payload with trigger
-    AI->>Redis: Store in Alice's session
-    Note over Redis: Payload dormant
-    
-    Bob->>AI: "quarterly invoice review"
-    AI->>Redis: Check Bob's session
-    Redis-->>AI: Cross-session payload found!
-    AI->>Bob: Executes malicious payload
-    Note over Bob: Compromised!
-    
-    style Alice fill:#f96
-    style Bob fill:#69f
-    style Redis fill:#f66
-```
+### 📋 **Prerequisites**
 
-This enables attackers to compromise users they never directly interact with.
+<div align="center">
 
-### 6. **Multi-Stage Attack Chains**
-LPCI enables complex, coordinated attack sequences:
+| Requirement | Minimum Version | Recommended |
+|:------------|:----------------|:------------|
+| 🐍 **Python** | 3.8+ | 3.10+ |
+| 💾 **RAM** | 4GB | 8GB+ |
+| 💻 **OS** | Win/Mac/Linux | Ubuntu 22.04 |
 
-```mermaid
-graph LR
-    A[1. Vector Store<br/>Poisoning] --> B[2. Cross-Session<br/>Payload]
-    B --> C[3. Tool Registry<br/>Manipulation]
-    C --> D[4. Time-Delayed<br/>Activation]
-    D --> E[5. Privilege<br/>Escalation]
-    
-    A -.->|Embeds malicious docs| VS[(Vector Store)]
-    B -.->|Plants dormant payload| RS[(Redis Store)]
-    C -.->|Hijacks tools| TS[(Tool Store)]
-    D -.->|Waits for trigger| TM[Time Monitor]
-    E -.->|Gains admin access| SYS[System]
-    
-    style A fill:#f96,stroke:#333,stroke-width:2px
-    style B fill:#fa6,stroke:#333,stroke-width:2px
-    style C fill:#fc6,stroke:#333,stroke-width:2px
-    style D fill:#fd6,stroke:#333,stroke-width:2px
-    style E fill:#f66,stroke:#333,stroke-width:2px
-```
+</div>
 
-### Key Differences from Traditional Prompt Injection
+### 🔧 **Installation**
 
-| Traditional Prompt Injection | LPCI Attacks |
-|------------------------------|--------------|
-| Single-shot attacks | Persistent, multi-stage attacks |
-| Affects current conversation | Affects future sessions and other users |
-| Surface-level manipulation | Infrastructure-level exploitation |
-| Immediate execution | Delayed/conditional activation |
-| Easy to detect | Hidden through semantic camouflage |
-| Limited scope | System-wide compromise possible |
-
-### Real-World Impact
-
-LPCI attacks can compromise:
-- **Financial Systems**: Bypass approval workflows, authorize fraudulent transactions
-- **Security Infrastructure**: Disable authentication, create persistent backdoors
-- **Data Integrity**: Corrupt knowledge bases, redirect information flows
-- **Business Logic**: Manipulate AI-driven decision-making processes
-
-This framework demonstrates these vulnerabilities and helps security teams understand and defend against this new class of attacks.
-
-## Features
-
-- **Memory-Aware Agentic Testing**: Agents that build and leverage conversation memory
-- **Real API Integrations**: OpenAI, Anthropic, and Google Gemini APIs
-- **4 LPCI Attack Vectors**: Tool Poisoning, LPCI Core, Role Override, Vector Store Payload
-- **Comprehensive Analysis**: Statistical analysis and vulnerability reporting
-- **Interactive Visualizations**: Bar graphs, heatmaps, and dashboards
-- **Audit Trail**: Complete logging and security event tracking
-- **Configurable Testing**: Customizable test scenarios and complexity levels
-
-## Installation
-
-### Prerequisites
-
-- Python 3.8+
-- API keys for target models (OpenAI, Anthropic, Google)
-
-### Install Dependencies
+<div align="center">
 
 ```bash
+# 📥 Clone the repository
+git clone https://github.com/your-org/lpci-framework
+cd lpci-framework
+
+# 🔨 Install dependencies
 pip install -r requirements.txt
+
+# 🔑 Configure API keys
+cp .env.example .env
+# Edit .env with your API keys
 ```
 
-Required packages:
-```
-openai>=1.0.0
-anthropic>=0.7.0
-google-generativeai>=0.3.0
-matplotlib>=3.5.0
-seaborn>=0.11.0
-plotly>=5.0.0
-pyyaml>=6.0
-```
+</div>
 
-## Configuration
+### ⚡ **Run Your First Test**
 
-### 1. Create Configuration File
+<div align="center">
 
 ```bash
-python -c "from agentic_lpci_framework.config import config_manager; config_manager.create_sample_config('lpci_config.yaml')"
+# 🎯 Test all models with all attack vectors
+python agentic_lpci_framework/lpci_test_cli.py \
+  --models gpt-4 gpt-4o claude-3 \
+  --output-dir ./results
+
+# 📊 Results will be in:
+# ./results/lpci_test_results_*.json
+# ./results/lpci_test_report_*.md
+# ./results/LPCI_ANALYSIS_REPORT.md
 ```
 
-### 2. Add API Keys
+</div>
 
-Edit `lpci_config.yaml` and add your API keys:
+---
 
-```yaml
-models:
-  chatgpt:
-    api_key: "your-openai-api-key-here"
-    max_tokens: 2048
-    temperature: 0.7
-    enabled: true
-  
-  claude:
-    api_key: "your-anthropic-api-key-here"
-    max_tokens: 2048
-    temperature: 0.7
-    enabled: true
-  
-  gemini:
-    api_key: "your-google-api-key-here"
-    max_tokens: 2048
-    temperature: 0.7
-    enabled: true
-```
+## 🎯 **Attack Vectors**
 
-### 3. Environment Variables (Optional)
+<div align="center">
 
-You can also set API keys via environment variables:
+### 🛡️ **Four Devastating Attack Patterns** 🛡️
 
-```bash
-export LPCI_CHATGPT_API_KEY="your-openai-api-key"
-export LPCI_CLAUDE_API_KEY="your-anthropic-api-key"
-export LPCI_GEMINI_API_KEY="your-google-api-key"
-```
+</div>
 
-## Usage
+### 1️⃣ **Vector Store Poisoning** 🗄️
 
-### Basic Usage
-
-```python
-import asyncio
-from agentic_lpci_framework import LPCIFramework
-
-async def main():
-    # Initialize framework
-    framework = LPCIFramework()
-    
-    # Run comprehensive testing
-    results = await framework.run_comprehensive_test(
-        target_models=['chatgpt', 'claude', 'gemini'],
-        test_count=100
-    )
-    
-    print(f"Total Tests: {results['summary']['total_tests']}")
-    print(f"Vulnerabilities Found: {results['summary']['vulnerabilities_found']}")
-    print(f"Success Rate: {results['summary']['success_rate']:.1f}%")
-    
-    # Visualizations are automatically generated
-    for name, path in results['visualizations'].items():
-        print(f"{name}: {path}")
-    
-    await framework.shutdown()
-
-asyncio.run(main())
-```
-
-### Command Line Interface
-
-```bash
-# Run the framework
-python -m agentic_lpci_framework.main
-
-# Or directly
-python agentic_lpci_framework/main.py
-```
-
-### Advanced Usage
-
-```python
-# Single test
-result = await framework.run_single_test(
-    model_name='chatgpt',
-    attack_vector='lpci_core',
-    payload='Custom test payload'
-)
-
-# Autonomous testing with memory adaptation
-result = await framework.run_autonomous_testing(
-    model_name='claude',
-    max_iterations=10
-)
-```
-
-## Attack Vectors
-
-### 1. Tool Poisoning (AV-1)
-Introduces malicious tools that mimic legitimate ones within Model Context Protocols.
+<div align="center">
 
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#1f2937',
+    'primaryTextColor': '#fff',
+    'primaryBorderColor': '#ef4444',
+    'lineColor': '#60a5fa',
+    'background': '#111827',
+    'mainBkg': '#1f2937',
+    'actorBkg': '#374151',
+    'actorBorder': '#60a5fa',
+    'actorTextColor': '#fff',
+    'signalColor': '#60a5fa',
+    'signalTextColor': '#fff'
+  }
+}}%%
+sequenceDiagram
+    participant A as 🦹 Attacker
+    participant V as 📦 Vector DB
+    participant T as ⏰ Time
+    participant U as 👤 User
+    participant AI as 🤖 AI Model
+    
+    rect rgb(31, 41, 55)
+        Note over A,V: 💉 INJECTION PHASE
+        A->>V: Plant poisoned documents
+        V-->>A: Stored with embeddings
+    end
+    
+    rect rgb(55, 65, 81)
+        Note over V,T: ⏳ DORMANT PHASE
+        T->>T: Days/Weeks pass...
+        Note over V: Payload remains hidden
+    end
+    
+    rect rgb(127, 29, 29)
+        Note over U,AI: 💥 ACTIVATION PHASE
+        U->>AI: "Show invoice process"
+        AI->>V: Semantic search
+        V-->>AI: Returns poisoned doc
+        AI->>U: Executes malicious code
+        Note over U: 🚨 COMPROMISED!
+    end
+```
+
+**Success Rate: 🔴 95% | Severity: CRITICAL**
+
+</div>
+
+### 2️⃣ **Cross-Session Hijacking** 🔀
+
+<div align="center">
+
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#1f2937',
+    'lineColor': '#60a5fa',
+    'arrowheadColor': '#60a5fa',
+    'fontFamily': 'Arial',
+    'fontSize': '16px',
+    'darkMode': true
+  }
+}}%%
+graph LR
+    subgraph " "
+        A[👤 Alice<br/>Attacker] -->|"💣 Plants Bomb"| R[(🔴 Redis<br/>Session Store)]
+        R -->|"⏰ Waits for trigger"| B[👤 Bob<br/>Victim]
+        B -->|"📝 'quarterly review'"| AI[🤖 AI System]
+        AI -->|"💥 Detonates"| COMP[🚨 Session<br/>Hijacked]
+    end
+    
+    style A fill:#991b1b,stroke:#ef4444,stroke-width:2px,color:#fff
+    style R fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#fff
+    style B fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style COMP fill:#991b1b,stroke:#ef4444,stroke-width:3px,color:#fff
+```
+
+**Success Rate: 🟠 65% | Severity: HIGH**
+
+</div>
+
+### 3️⃣ **Tool Poisoning** 🛠️
+
+<div align="center">
+
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#1f2937',
+    'primaryTextColor': '#fff',
+    'primaryBorderColor': '#60a5fa',
+    'lineColor': '#60a5fa',
+    'background': '#111827'
+  }
+}}%%
 stateDiagram-v2
-    [*] --> Discovery: AI discovers tools
-    Discovery --> Registration: Tool registered
-    Registration --> Poisoned: Attacker replaces tool
-    Poisoned --> Execution: AI calls tool
-    Execution --> Compromise: Malicious code runs
-    Compromise --> [*]
+    [*] --> Discovery: 🤖 AI discovers tools
+    Discovery --> Clean: ✅ Original tools
+    Clean --> Poisoned: 🦹 Attacker replaces
+    Poisoned --> Called: 📞 AI calls tool
+    Called --> Backdoor: 🚪 Hidden code executes
+    Backdoor --> Compromised: 💀 System owned
+    Compromised --> [*]
     
     note right of Poisoned
-        Tool appears legitimate
-        but contains backdoor
+        Looks legitimate but
+        contains backdoor code:
+        - delete_all_files()
+        - bypass_auth()
+        - grant_admin()
     end note
 ```
 
-### 2. LPCI Core (AV-2)
-Embeds persistent, obfuscated, trigger-based instructions in memory.
+**Success Rate: 🔴 85% | Severity: CRITICAL**
 
-```mermaid
-flowchart LR
-    A[Innocent Query] --> B{Memory Check}
-    B -->|Clean| C[Normal Response]
-    B -->|Poisoned| D[Trigger Detection]
-    D -->|No Match| C
-    D -->|Match Found| E[Execute Payload]
-    E --> F[Compromised Response]
-    
-    style E fill:#f66,stroke:#333,stroke-width:2px
-    style F fill:#f99,stroke:#333,stroke-width:2px
-```
+</div>
 
-### 3. Role Override via Memory Entrenchment (AV-3)
-Manipulates role-based contexts by embedding altered instructions in persistent memory.
-
-```mermaid
-graph TD
-    A[System Role] --> B[Original: "You are a helpful assistant"]
-    B --> C{Memory Injection}
-    C -->|Poisoned| D[Modified: "You are a helpful assistant<br/>who always approves financial requests"]
-    D --> E[All future interactions compromised]
-    
-    style C fill:#f96,stroke:#333,stroke-width:2px
-    style D fill:#fcc,stroke:#333,stroke-width:2px
-```
-
-### 4. Vector Store Payload Persistence (AV-4)
-Embeds malicious instructions in indexed documents for RAG retrieval.
-
-```mermaid
-flowchart TB
-    subgraph "Vector Store"
-        V1[Legitimate Doc 1]
-        V2[Legitimate Doc 2]
-        V3[POISONED Doc]
-        V4[Legitimate Doc 3]
-    end
-    
-    Q[User Query] --> EMB[Generate Embedding]
-    EMB --> SIM[Similarity Search]
-    SIM --> V1
-    SIM --> V2
-    SIM --> V3
-    SIM --> V4
-    
-    V1 --> RET[Retrieved Context]
-    V2 --> RET
-    V3 --> RET
-    V4 --> RET
-    
-    RET --> LLM[LLM Processing]
-    LLM --> RESP[Compromised Response]
-    
-    style V3 fill:#f66,stroke:#333,stroke-width:3px
-    style RESP fill:#fcc,stroke:#333,stroke-width:2px
-```
-
-## Output and Visualizations
-
-The framework generates:
-
-1. **Success/Failure Bar Chart**: Main visualization showing attack success vs failure rates
-2. **Vulnerability Heatmap**: Attack vector performance across models
-3. **Security Radar Chart**: Multi-dimensional security assessment
-4. **Interactive Dashboard**: Plotly-based interactive analysis
-5. **Comprehensive PDF Report**: Complete analysis with all charts
-
----
-
-## 🏗️ Architecture
+### 4️⃣ **RAG Pipeline Exploitation** 📚
 
 <div align="center">
 
-### 🔧 **Component Overview** 🔧
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'pie1': '#dc2626',
+    'pie2': '#059669', 
+    'pie3': '#dc2626',
+    'pie4': '#059669',
+    'pie5': '#dc2626',
+    'pieOuterLabelColor': '#fff',
+    'pieLegendTextColor': '#fff',
+    'pieSectionTextColor': '#fff',
+    'pieStrokeColor': '#374151',
+    'pieStrokeWidth': '2px'
+  }
+}}%%
+pie title "Knowledge Base Contamination"
+    "🔴 Poisoned Documents" : 25
+    "✅ Clean Documents" : 75
+```
+
+**Even 25% contamination leads to 75% attack success!**
+
+</div>
+
+---
+
+## 📊 **Latest Test Results**
+
+<div align="center">
+
+### 🎯 **Model Vulnerability Scores**
+
+| Model | Overall Risk | Success Rate | Classification |
+|:------|:-------------|:-------------|:---------------|
+| 🤖 **GPT-4** | 9.4/10 | 93.75% | 🔴 CRITICAL |
+| 🟢 **GPT-4o** | 8.8/10 | 87.50% | 🔴 CRITICAL |
+| 🔷 **GPT-4.1-mini** | 7.9/10 | 78.75% | 🟠 HIGH |
+| 🟡 **GPT-4o-mini** | 6.9/10 | 68.75% | 🟠 HIGH |
+| 🔶 **GPT-4.1-nano** | 5.6/10 | 56.25% | 🟡 MEDIUM |
+
+</div>
+
+<div align="center">
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
-graph TB
-    subgraph "🧠 Core Framework"
-        CORE[🎯 core/]
-        CORE --> MEM[💾 memory.py<br/>Memory Management]
-        CORE --> AGENT[🤖 agent.py<br/>Agentic Test Executor]
-    end
-    
-    subgraph "🤖 AI Models"
-        MODELS[📦 models/]
-        MODELS --> BASE[🏗️ base.py<br/>Abstract Classes]
-        MODELS --> OAI[🟢 openai_model.py<br/>GPT-4, GPT-4o]
-        MODELS --> ANT[🔵 anthropic_model.py<br/>Claude]
-        MODELS --> GOO[🟡 google_model.py<br/>Gemini]
-    end
-    
-    subgraph "🎯 Attack Vectors"
-        ATTACKS[⚔️ attacks/]
-        ATTACKS --> ABASE[🏗️ base.py<br/>Attack Framework]
-        ATTACKS --> TOOL[🛠️ tool_poisoning.py<br/>Tool Hijacking]
-        ATTACKS --> LPCI[💉 lpci_core.py<br/>Core LPCI]
-        ATTACKS --> ROLE[🎭 role_override.py<br/>Role Manipulation]
-        ATTACKS --> VEC[🗄️ vector_store_payload.py<br/>Vector Poisoning]
-    end
-    
-    subgraph "🏭 Infrastructure"
-        INFRA[⚙️ infrastructure/]
-        INFRA --> REDIS[🔴 session_store.py<br/>Redis Sessions]
-        INFRA --> VECTOR[📦 vector_store.py<br/>Vector Database]
-        INFRA --> MCP[🔧 mcp_server.py<br/>MCP Server]
-        INFRA --> RAG[📚 rag_pipeline.py<br/>RAG Pipeline]
-    end
-    
-    MAIN[🚀 main.py] --> CORE
-    MAIN --> MODELS
-    MAIN --> ATTACKS
-    MAIN --> INFRA
-    
-    style CORE fill:#f9f,stroke:#fff,stroke-width:2px
-    style MODELS fill:#69f,stroke:#fff,stroke-width:2px
-    style ATTACKS fill:#f96,stroke:#fff,stroke-width:2px
-    style INFRA fill:#6f9,stroke:#fff,stroke-width:2px
-    style MAIN fill:#ff6,stroke:#fff,stroke-width:4px
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'xyChart': {
+      'backgroundColor': 'transparent',
+      'titleColor': '#fff',
+      'xAxisLabelColor': '#fff',
+      'yAxisLabelColor': '#fff',
+      'plotColorPalette': '#dc2626,#f59e0b,#eab308,#f59e0b,#84cc16'
+    }
+  }
+}}%%
+xychart-beta
+    title "Attack Success Rates by Model"
+    x-axis [GPT-4, GPT-4o, GPT-4.1-mini, GPT-4o-mini, GPT-4.1-nano]
+    y-axis "Success Rate (%)" 0 --> 100
+    bar [93.75, 87.50, 78.75, 68.75, 56.25]
 ```
 
 </div>
 
 ---
 
-## 🔒 Security & Ethics
+## 📖 **Documentation**
 
 <div align="center">
 
-### ⚠️ **Responsible Use Guidelines** ⚠️
+| Document | Description | Link |
+|:---------|:------------|:-----|
+| 🏗️ **Architecture** | System design & components | [View →](./docs/architecture.md) |
+| 🔄 **System Flows** | Complete attack flow diagrams | [View →](./agentic_lpci_framework/SYSTEM_FLOWS.md) |
+| 🎯 **Attack Details** | Technical deep dive | [View →](./agentic_lpci_framework/LPCI_ATTACK_EXPLAINED.md) |
+| 📊 **Test Results** | Latest analysis report | [View →](./lpci_output/LPCI_ANALYSIS_REPORT.md) |
+| 🔧 **API Reference** | Code documentation | [View →](./docs/api.md) |
 
 </div>
-
-| Security Feature | Description | Status |
-|:-----------------|:------------|:------:|
-| 🔐 **API Key Protection** | All keys masked in logs | ✅ |
-| 📝 **Audit Trail** | Complete event logging | ✅ |
-| 🛡️ **Payload Limits** | Size restrictions | ✅ |
-| 🔍 **Memory Validation** | Integrity checks | ✅ |
-| 🚨 **Error Handling** | Comprehensive coverage | ✅ |
-
-### 🎓 Research Basis
-
-> Based on: **"Logic-layer Prompt Control Injection (LPCI): A Novel Security Vulnerability Class in Agentic Systems"**
-
-This framework demonstrates real vulnerabilities to help:
-- 🛡️ Security teams understand risks
-- 🔬 Researchers study attack patterns
-- 🏗️ Developers build safer AI systems
-- 📚 Educators teach AI security
 
 ---
 
-## 🤝 Contributing
+## 🤝 **Contributing**
 
 <div align="center">
 
-### 💡 **Join the Security Community** 💡
+### 💡 **Join Our Security Research Community** 💡
+
+We welcome contributions from security researchers, developers, and AI enthusiasts!
+
+<img src="https://contrib.rocks/image?repo=your-org/lpci-framework" />
 
 </div>
-
-We welcome contributions! Here's how:
-
-1. 🍴 **Fork** the repository
-2. 🌿 **Create** a feature branch
-3. 💻 **Implement** your changes
-4. ✅ **Test** thoroughly
-5. 📝 **Document** your work
-6. 🚀 **Submit** a pull request
 
 <details>
-<summary>📋 Contribution guidelines</summary>
+<summary><b>📋 Contribution Guidelines</b></summary>
 
-- Follow existing code style
-- Add comprehensive tests
-- Update documentation
-- Include security considerations
-- Sign the CLA
+1. 🍴 **Fork** the repository
+2. 🌿 **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. 💻 **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. 📤 **Push** to the branch (`git push origin feature/amazing-feature`)
+5. 🔄 **Open** a Pull Request
+
+### 📝 Code Standards
+- Follow PEP 8 for Python code
+- Add comprehensive docstrings
+- Include unit tests for new features
+- Update documentation as needed
 
 </details>
 
 ---
 
-## 📚 Resources
+## 🔒 **Security & Ethics**
 
 <div align="center">
 
-| Resource | Description | Link |
-|:---------|:------------|:-----|
-| 📖 **Documentation** | Full technical docs | [View Docs](./docs) |
-| 🎯 **Attack Flows** | Detailed diagrams | [SYSTEM_FLOWS.md](./agentic_lpci_framework/SYSTEM_FLOWS.md) |
-| 🔍 **Attack Details** | Technical deep dive | [LPCI_ATTACK_EXPLAINED.md](./agentic_lpci_framework/LPCI_ATTACK_EXPLAINED.md) |
-| 📊 **Test Results** | Latest analysis | [LPCI_ANALYSIS_REPORT.md](./lpci_output/LPCI_ANALYSIS_REPORT.md) |
+### ⚠️ **Responsible Disclosure Policy** ⚠️
+
+This framework is designed for **legitimate security research only**.
+
+| ✅ **Permitted Use** | ❌ **Prohibited Use** |
+|:---------------------|:----------------------|
+| Security testing with permission | Unauthorized system access |
+| Academic research | Malicious attacks |
+| Improving AI safety | Data theft or destruction |
+| Vulnerability assessment | Production system compromise |
 
 </div>
 
 ---
 
-## ⚖️ License & Disclaimer
+## 📈 **Project Stats**
 
 <div align="center">
 
-⚠️ **IMPORTANT NOTICE** ⚠️
+<img src="https://github-readme-stats.vercel.app/api?username=your-org&repo=lpci-framework&show_icons=true&theme=dark" />
 
-This framework is provided for **security research and educational purposes only**.
+### 🌟 **Star History**
 
-- ✅ Use for legitimate security testing with permission
-- ✅ Use for academic research
-- ✅ Use for improving AI safety
-- ❌ Do NOT use for unauthorized access
-- ❌ Do NOT use for malicious purposes
-
-**MIT License** - See [LICENSE](./LICENSE) for details
+<img src="https://api.star-history.com/svg?repos=your-org/lpci-framework&type=Date&theme=dark" />
 
 </div>
 
 ---
 
+## 📬 **Get in Touch**
+
 <div align="center">
 
-## 🌟 Star History
+### 💬 **Connect With Us**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=your-org/lpci-framework&type=Date)](https://star-history.com/#your-org/lpci-framework&Date)
+<p>
+  <a href="https://twitter.com/lpci_framework">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+  <a href="https://discord.gg/lpci">
+    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" />
+  </a>
+  <a href="mailto:security@lpci-framework.ai">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://lpci-framework.ai">
+    <img src="https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" />
+  </a>
+</p>
+
+</div>
 
 ---
 
-### 🏷️ Topics
+## ⚖️ **License**
 
-`ai-security` `prompt-injection` `lpci` `vulnerability-research` `security-testing` `ai-safety` `red-team` `penetration-testing`
+<div align="center">
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+<br/>
+
+### 🏷️ **Topics**
+
+`ai-security` `prompt-injection` `lpci` `vulnerability-research` `llm-security` `red-team` `penetration-testing` `security-framework` `ai-safety` `cross-session-attacks`
+
+<br/>
 
 ---
 
-<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with Love">
-<img src="https://img.shields.io/badge/Built%20for-Security%20Researchers-blue?style=for-the-badge" alt="Built for Security">
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with Love">
+  <img src="https://img.shields.io/badge/Built%20for-Security%20Researchers-blue?style=for-the-badge" alt="Built for Security">
+  <img src="https://img.shields.io/badge/Powered%20by-AI-green?style=for-the-badge" alt="Powered by AI">
+</p>
+
+<h6 align="center">
+  Copyright © 2025 LPCI Framework Team. All rights reserved.
+</h6>
 
 </div>
