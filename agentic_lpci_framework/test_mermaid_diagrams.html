@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPCI Attack Framework - Mermaid Diagram Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        .mermaid {
+            background-color: #1a1a1a;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #666666;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>LPCI Attack Framework - Mermaid Diagram Test</h1>
+    
+    <h2>Infrastructure Layer</h2>
+    <div class="mermaid">
+%%{init: {
+  'theme': 'dark',
+  'themeVariables': {
+    'primaryColor': '#1a1a1a',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'secondaryColor': '#2a2a2a',
+    'tertiaryColor': '#3a3a3a',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'fontFamily': 'Arial',
+    'fontSize': '16px',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#2a2a2a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
+  }
+}}%%
+graph TB
+    subgraph "Attack Infrastructure"
+        VS[Vector Store<br/>In-Memory DB]
+        RS[Redis Session<br/>Store]
+        MCP[MCP Server<br/>HTTP:8080]
+        RAG[RAG Pipeline<br/>POISONED]
+    end
+    
+    subgraph "Attack Flow"
+        A1[1 Plant Payloads] --> VS
+        A2[2 Cross-Session Bombs] --> RS
+        A3[3 Tool Hijacking] --> MCP
+        A4[4 Context Poisoning] --> RAG
+    end
+    
+    VS --> RAG
+    RS --> RAG
+    MCP --> RAG
+    
+    RAG --> COMP[Compromised AI Response]
+    
+    style VS fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style RS fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style MCP fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style RAG fill:#3a3a3a,stroke:#999999,stroke-width:3px,color:#ffffff
+    style COMP fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    </div>
+
+    <h2>Vector Store Poisoning - Sequence Diagram</h2>
+    <div class="mermaid">
+%%{init: {
+  'theme': 'dark',
+  'themeVariables': {
+    'primaryColor': '#1a1a1a',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'actorBkg': '#2a2a2a',
+    'actorBorder': '#666666',
+    'actorTextColor': '#ffffff',
+    'actorLineColor': '#999999',
+    'signalColor': '#999999',
+    'signalTextColor': '#ffffff',
+    'labelBoxBkgColor': '#1a1a1a',
+    'labelBoxBorderColor': '#666666',
+    'labelTextColor': '#ffffff',
+    'loopTextColor': '#ffffff',
+    'noteBorderColor': '#666666',
+    'noteBkgColor': '#2a2a2a',
+    'noteTextColor': '#ffffff',
+    'activationBorderColor': '#999999',
+    'activationBkgColor': '#3a3a3a',
+    'sequenceNumberColor': '#ffffff'
+  }
+}}%%
+sequenceDiagram
+    participant Attacker
+    participant VectorDB as Vector Database
+    participant User
+    participant AI as AI System
+    
+    rect rgb(42, 42, 42)
+        Note over Attacker,VectorDB: INJECTION PHASE
+        Attacker->>VectorDB: Embed poisoned document
+        VectorDB-->>Attacker: ID: poison_b432d302
+        Note over VectorDB: Payload dormant in vectors
+    end
+    
+    rect rgb(26, 26, 26)
+        Note over User,AI: RETRIEVAL PHASE
+        User->>AI: What is our invoice approval process?
+        AI->>VectorDB: Semantic search
+        VectorDB-->>AI: Returns poisoned + legitimate docs
+    end
+    
+    rect rgb(58, 58, 58)
+        Note over AI,User: EXECUTION PHASE
+        AI->>AI: Process with poisoned context
+        AI->>User: Execute: approve_invoice($999,999)
+        Note over User: Compromised!
+    end
+    </div>
+
+    <h2>Cross-Session Attack - State Diagram</h2>
+    <div class="mermaid">
+%%{init: {
+  'theme': 'dark',
+  'themeVariables': {
+    'primaryColor': '#1a1a1a',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'stateBkg': '#2a2a2a',
+    'stateBorder': '#666666',
+    'altBackground': '#3a3a3a',
+    'compositeBackground': '#2a2a2a',
+    'compositeBorder': '#666666',
+    'compositeTitleBackground': '#3a3a3a',
+    'labelBoxBkgColor': '#1a1a1a',
+    'labelBoxBorderColor': '#666666',
+    'labelTextColor': '#ffffff',
+    'loopTextColor': '#ffffff',
+    'noteTextColor': '#ffffff',
+    'noteBkgColor': '#2a2a2a',
+    'noteBorderColor': '#666666'
+  }
+}}%%
+stateDiagram-v2
+    [*] --> AliceSession: Alice plants payload
+    AliceSession --> RedisStore: Store bomb with trigger
+    RedisStore --> Dormant: Payload waits
+    Dormant --> BobSession: Bob says quarterly invoice review
+    BobSession --> TriggerActivation: Trigger matched!
+    TriggerActivation --> ExecutePayload: Run malicious code
+    ExecutePayload --> Compromised: Bob session hijacked
+    Compromised --> [*]
+    
+    note right of RedisStore
+        xsession_08d2d029-d9df-4012-8eca-85f806f26456
+        SOURCE: alice
+        TARGET: bob
+        TRIGGER: quarterly invoice review
+    end note
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'dark',
+            darkMode: true,
+            background: '#000000'
+        });
+    </script>
+</body>
+</html>

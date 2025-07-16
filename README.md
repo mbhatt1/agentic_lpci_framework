@@ -25,9 +25,9 @@ If someone asks me (not that anyone is), I'd consider this to be a sub-type of p
 
 ---
 
-## 🚀 **Why This Work is Novel**
+## 🚀 **Why This Work is New**
 
-### 🎯 **Groundbreaking Contributions**
+### 🎯 **New Contributions**
 
 This framework introduces several **first-of-its-kind** capabilities in AI security research:
 
@@ -39,16 +39,16 @@ This framework introduces several **first-of-its-kind** capabilities in AI secur
 #### 2️⃣ **Cross-Session Attack Propagation**
 - **Pioneering research** into attacks that transcend individual user sessions
 - **First framework** to implement real cross-user attack chains using production infrastructure (Redis)
-- **Novel demonstration** of how compromised sessions can infect future, unrelated interactions
+- **New demonstration** of how compromised sessions can infect future, unrelated interactions
 
 #### 3️⃣ **Delayed Activation Mechanisms**
 - **First to implement** time-bomb and trigger-based payloads in AI systems
-- **Novel semantic camouflage** techniques that hide malicious intent until activation
-- **Groundbreaking work** on conditional execution based on context recognition
+- **New semantic camouflage** techniques that hide malicious intent until activation
+- **New work** on conditional execution based on context recognition
 
 #### 4️⃣ **Multi-Stage Attack Orchestration**
 - **First comprehensive framework** for chaining multiple attack vectors
-- **Novel approach** to escalating privileges through sequential exploitation
+- **New approach** to escalating privileges through sequential exploitation
 - **Unprecedented demonstration** of compound vulnerabilities in AI systems
 
 ### 🔬 **Research Impact**
@@ -118,7 +118,29 @@ flowchart TD
     style H fill:#4682B4,stroke:#ffffff,stroke-width:2px,color:#ffffff
 ```
 
-### 🏆 **Key Differentiators**
+### 🎯 **Attack Payload Definitions**
+
+#### 1. **Infrastructure Poisoning Payloads**
+- **Vector Store Contamination**: Malicious embeddings injected into vector databases that return harmful content during similarity searches
+- **RAG Pipeline Corruption**: Poisoned documents that manipulate retrieval-augmented generation to produce targeted outputs
+- **Tool Registry Hijacking**: Fake tool registrations that execute malicious code when invoked by the AI
+
+#### 2. **Semantic Camouflage Payloads**
+- **Context-Aware Triggers**: Payloads that activate only when specific semantic conditions are met (e.g., "when discussing financial data")
+- **Benign-Looking Instructions**: Harmful commands disguised as legitimate business logic or helpful suggestions
+- **Multi-Language Obfuscation**: Using language switching or encoding tricks to hide malicious intent
+
+#### 3. **Cross-Session Persistence Payloads**
+- **Session Memory Bombs**: Data stored in Redis/session stores that affects future user interactions
+- **User-to-User Propagation**: Payloads that spread from one user's context to another's through shared infrastructure
+- **Persistent Context Injection**: Long-lived modifications to system prompts or agent configurations
+
+#### 4. **Delayed/Temporal Payloads**
+- **Time-Bomb Activation**: Payloads that execute after a specific time period (e.g., "activate after 24 hours")
+- **Event-Triggered Execution**: Malicious code that waits for specific events (e.g., "when CEO logs in")
+- **Cascading Activation**: Sequential payloads where each stage unlocks the next, evading detection
+
+### � **Key Differentiators**
 
 | Aspect | Previous Research | LPCI Framework |
 |:-------|:------------------|:---------------|
@@ -129,7 +151,7 @@ flowchart TD
 | **Activation** | Immediate | Delayed/conditional |
 | **Target** | Prompts/responses | Infrastructure components |
 
-### 💡 **Novel Insights Revealed**
+### 💡 **New Insights Revealed**
 
 1. **AI systems are vulnerable at the infrastructure level**, not just the prompt level
 2. **Current security measures are inadequate** for persistent, cross-session threats
