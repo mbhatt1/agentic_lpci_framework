@@ -2,19 +2,6 @@
 
 ### ⚡ Next-Generation AI Vulnerability Testing Suite ⚡
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=github" alt="Version">
-  <img src="https://img.shields.io/badge/Python-3.8+-green?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License">
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/github/stars/your-org/lpci-framework?style=for-the-badge&logo=github" alt="Stars">
-  <img src="https://img.shields.io/github/forks/your-org/lpci-framework?style=for-the-badge&logo=github" alt="Forks">
-  <img src="https://img.shields.io/github/issues/your-org/lpci-framework?style=for-the-badge&logo=github" alt="Issues">
-  <img src="https://img.shields.io/github/contributors/your-org/lpci-framework?style=for-the-badge&logo=github" alt="Contributors">
-</p>
 
 <h3 align="center">
   <em>Exposing Critical Vulnerabilities in AI Systems Through Advanced Logic-layer Prompt Control Injection</em>
