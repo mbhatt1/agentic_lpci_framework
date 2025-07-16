@@ -295,9 +295,9 @@ stateDiagram-v2
     
     state SessionOps {
         [*] --> CreateSession
-        CreateSession --> StoreData: SET session:user:data
+        CreateSession --> StoreData: SET session/user/data
         StoreData --> UpdateData: HSET fields
-        UpdateData --> CheckBombs: SCAN bombs:*
+        UpdateData --> CheckBombs: SCAN bombs/*
         CheckBombs --> ProcessTriggers: Match triggers
         ProcessTriggers --> [*]
     }
