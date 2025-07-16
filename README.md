@@ -1,4 +1,4 @@
-# 🛡️ **Latent Prompt Control Injection (LPCI) Security Testing Framework** 🛡️
+# 🛡️ Latent Prompt Control Injection Security Testing Framework 🛡️
 
 <h3 >
   <em>Exposing Critical Vulnerabilities in AI Systems Through Advanced Logic-layer Prompt Control Injection</em>
