@@ -1,10 +1,3 @@
-<div align="center">
-<br/>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/lpci-logo-dark.png#gh-dark-mode-only" alt="LPCI Framework Logo" width="200">
-  <img src="https://github.com/user-attachments/assets/lpci-logo-light.png#gh-light-mode-only" alt="LPCI Framework Logo" width="200">
-</p>
-
 # 🛡️ **LPCI Security Testing Framework** 🛡️
 
 ### ⚡ Next-Generation AI Vulnerability Testing Suite ⚡
