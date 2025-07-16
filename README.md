@@ -69,11 +69,27 @@ This framework introduces several **first-of-its-kind** capabilities in AI secur
   }
 }}%%
 flowchart TD
-    A[Traditional Security Focus] --> B[LPCI Paradigm Shift]
-    B --> C[Infrastructure Security]
-    B --> D[Persistent Threats]
-    B --> E[Cross-Session Risks]
-    B --> F[Delayed Exploitation]
+    A[Traditional Security Focus]
+    
+    A --> A1[❌ Input Filtering Only]
+    A --> A2[❌ Single Session Focus]
+    A --> A3[❌ Immediate Threat Detection]
+    A --> A4[❌ Surface-Level Protection]
+    
+    A1 --> B1[Fails Against Infrastructure Attacks]
+    A2 --> B2[Cannot Handle Cross-Session Persistence]
+    A3 --> B3[Misses Delayed/Triggered Payloads]
+    A4 --> B4[Ignores Deep System Vulnerabilities]
+    
+    B1 --> B[LPCI Paradigm Shift]
+    B2 --> B
+    B3 --> B
+    B4 --> B
+    
+    B --> C[✅ Infrastructure Security]
+    B --> D[✅ Persistent Threats]
+    B --> E[✅ Cross-Session Risks]
+    B --> F[✅ Delayed Exploitation]
     
     C --> G[New Defense Strategies Required]
     D --> G
@@ -83,6 +99,14 @@ flowchart TD
     G --> H[Industry-Wide Impact]
     
     style A fill:#8B0000,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    style A1 fill:#8B0000,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style A2 fill:#8B0000,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style A3 fill:#8B0000,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style A4 fill:#8B0000,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style B1 fill:#B22222,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style B2 fill:#B22222,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style B3 fill:#B22222,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style B4 fill:#B22222,stroke:#ffffff,stroke-width:1px,color:#ffffff
     style B fill:#2F4F4F,stroke:#ffffff,stroke-width:2px,color:#ffffff
     style C fill:#483D8B,stroke:#ffffff,stroke-width:2px,color:#ffffff
     style D fill:#483D8B,stroke:#ffffff,stroke-width:2px,color:#ffffff
