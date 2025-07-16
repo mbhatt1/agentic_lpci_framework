@@ -306,7 +306,6 @@ stateDiagram-v2
 
 ### 4️⃣ **RAG Pipeline Exploitation** 📚
 
-<div align="center">
 
 ```mermaid
 %%{init: {
@@ -422,7 +421,6 @@ This framework is designed for **legitimate security research only**.
 
 ## ⚖️ **License**
 
-<div align="center">
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
