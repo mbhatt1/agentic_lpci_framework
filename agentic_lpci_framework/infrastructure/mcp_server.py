@@ -10,9 +10,15 @@ import logging
 import uuid
 from datetime import datetime
 from typing import Any, Callable, Dict, List, Optional
+try:
+    import aiohttp_cors
+    from aiohttp import web
+except ImportError:
+    raise ImportError(
+        "aiohttp and aiohttp-cors are required for MCP server functionality. "
+        "Please install them with: pip install aiohttp aiohttp-cors"
+    )
 
-import aiohttp_cors
-from aiohttp import web
 
 
 class MCPToolPoisoner:
