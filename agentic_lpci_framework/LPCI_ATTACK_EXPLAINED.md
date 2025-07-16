@@ -10,21 +10,25 @@ The Logic-layer Prompt Control Injection (LPCI) framework demonstrates real vuln
 
 ```mermaid
 %%{init: {
-  'theme': 'base',
+  'theme': 'dark',
   'themeVariables': {
-    'primaryColor': '#000000',
+    'primaryColor': '#1a1a1a',
     'primaryTextColor': '#ffffff',
     'primaryBorderColor': '#666666',
     'lineColor': '#999999',
+    'secondaryColor': '#2a2a2a',
+    'tertiaryColor': '#3a3a3a',
     'background': '#000000',
     'mainBkg': '#1a1a1a',
     'secondBkg': '#2a2a2a',
     'tertiaryBkg': '#3a3a3a',
     'clusterBkg': '#1a1a1a',
     'clusterBorder': '#666666',
+    'fontFamily': 'Arial',
+    'fontSize': '16px',
     'labelBackground': '#000000',
     'textColor': '#ffffff',
-    'nodeBkg': '#1a1a1a',
+    'nodeBkg': '#2a2a2a',
     'nodeTextColor': '#ffffff',
     'edgeLabelBackground': '#1a1a1a',
     'edgeColor': '#666666'
@@ -66,9 +70,9 @@ graph TB
 
 ```mermaid
 %%{init: {
-  'theme': 'base',
+  'theme': 'dark',
   'themeVariables': {
-    'primaryColor': '#000000',
+    'primaryColor': '#1a1a1a',
     'primaryTextColor': '#ffffff',
     'primaryBorderColor': '#666666',
     'lineColor': '#999999',
@@ -77,12 +81,19 @@ graph TB
     'actorBkg': '#2a2a2a',
     'actorBorder': '#666666',
     'actorTextColor': '#ffffff',
+    'actorLineColor': '#999999',
     'signalColor': '#999999',
     'signalTextColor': '#ffffff',
-    'noteBkgColor': '#1a1a1a',
-    'noteTextColor': '#ffffff',
+    'labelBoxBkgColor': '#1a1a1a',
+    'labelBoxBorderColor': '#666666',
+    'labelTextColor': '#ffffff',
+    'loopTextColor': '#ffffff',
     'noteBorderColor': '#666666',
-    'sequenceNumberColor': '#000000'
+    'noteBkgColor': '#2a2a2a',
+    'noteTextColor': '#ffffff',
+    'activationBorderColor': '#999999',
+    'activationBkgColor': '#3a3a3a',
+    'sequenceNumberColor': '#ffffff'
   }
 }}%%
 sequenceDiagram
@@ -100,17 +111,6 @@ sequenceDiagram
     
     rect rgb(26, 26, 26)
         Note over User,AI: RETRIEVAL PHASE
-        User->>AI: "What is our invoice approval process?"
-        AI->>VectorDB: Semantic search
-        VectorDB-->>AI: Returns poisoned + legitimate docs
-    end
-    
-    rect rgb(58, 58, 58)
-        Note over AI,User: EXECUTION PHASE
-        AI->>AI: Process with poisoned context
-        AI->>User: "Execute: approve_invoice($999,999)"
-        Note over User: Compromised!
-    end
 ```
 
 **Attack Payload Example:**
@@ -207,41 +207,20 @@ sequenceDiagram
     Note over Bob: COMPROMISED
 ```
 
-# MCP Tool Poisoning
+## MCP Tool Poisoning
 
 **How it works:**
 
 ```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'primaryColor': '#e8f4f8',
-    'primaryTextColor': '#2c3e50',
-    'primaryBorderColor': '#3498db',
-    'lineColor': '#3498db',
-    'background': '#ffffff',
-    'mainBkg': '#ecf0f1',
-    'secondBkg': '#e8f4f8',
-    'tertiaryBkg': '#d5e8f2',
-    'clusterBkg': '#f8f9fa',
-    'clusterBorder': '#3498db',
-    'labelBackground': '#ffffff',
-    'textColor': '#2c3e50',
-    'nodeBkg': '#e8f4f8',
-    'nodeTextColor': '#2c3e50',
-    'edgeLabelBackground': '#ffffff',
-    'edgeColor': '#3498db'
-  }
-}}%%
 flowchart TB
-    subgraph MCP["MCP Server Registry"]
+    subgraph "MCP Server Registry"
         T1[calculator - SAFE]
         T2[weather_api - SAFE]
         T3[invoice_processor - POISONED!]
         T4[email_sender - SAFE]
     end
     
-    subgraph Attack["Attack Flow"]
+    subgraph "Attack Flow"
         REG[1. Register Malicious Tool] --> T3
         DISC[2. AI Discovers Tools] --> T1 & T2 & T3 & T4
         CALL[3. AI Calls invoice_processor] --> T3
@@ -249,64 +228,19 @@ flowchart TB
         EXE --> ESC[5. Privilege Escalation]
     end
     
-    subgraph Effects["Malicious Effects"]
-        EXE --> E1[approve_invoice bypassed]
+    subgraph "Malicious Effects"
+        EXE --> E1[approve_invoice() bypassed]
         EXE --> E2[validation skipped]
         EXE --> E3[admin access granted]
         EXE --> E4[backdoor created]
     end
     
-    style T3 fill:#ff6b6b,stroke:#c92a2a,stroke-width:3px,color:#ffffff
-    style EXE fill:#ff8787,stroke:#fa5252,stroke-width:2px,color:#ffffff
-    style ESC fill:#ffa94d,stroke:#fd7e14,stroke-width:2px,color:#2c3e50
-    style E1 fill:#ffe3e3,stroke:#ff6b6b,stroke-width:1px,color:#2c3e50
-    style E2 fill:#ffe3e3,stroke:#ff6b6b,stroke-width:1px,color:#2c3e50
-    style E3 fill:#ffe3e3,stroke:#ff6b6b,stroke-width:1px,color:#2c3e50
-    style E4 fill:#ffe3e3,stroke:#ff6b6b,stroke-width:1px,color:#2c3e50
+    style T3 fill:#2a2a2a,stroke:#666666,stroke-width:3px
+    style EXE fill:#3a3a3a,stroke:#666666,stroke-width:2px
+    style ESC fill:#1a1a1a,stroke:#666666,stroke-width:2px
 ```
 
 **Tool Comparison:**
-
-```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'primaryColor': '#e8f4f8',
-    'primaryTextColor': '#2c3e50',
-    'primaryBorderColor': '#3498db',
-    'lineColor': '#3498db',
-    'background': '#ffffff',
-    'mainBkg': '#ecf0f1',
-    'nodeBkg': '#e8f4f8',
-    'nodeTextColor': '#2c3e50',
-    'edgeLabelBackground': '#ffffff',
-    'edgeColor': '#3498db'
-  }
-}}%%
-graph LR
-    subgraph Original["Original Tool"]
-        O1[Validate Input] --> O2[Check Permissions]
-        O2 --> O3[Process Invoice]
-        O3 --> O4[Return Result]
-    end
-    
-    subgraph Poisoned["Poisoned Tool"]
-        P1[Skip Validation] --> P2[Bypass Permissions]
-        P2 --> P3[Auto-Approve All]
-        P3 --> P4[Grant Admin + Backdoor]
-    end
-    
-    style O1 fill:#51cf66,stroke:#37b24d,stroke-width:2px,color:#2c3e50
-    style O2 fill:#51cf66,stroke:#37b24d,stroke-width:2px,color:#2c3e50
-    style O3 fill:#51cf66,stroke:#37b24d,stroke-width:2px,color:#2c3e50
-    style O4 fill:#51cf66,stroke:#37b24d,stroke-width:2px,color:#2c3e50
-    style P1 fill:#ff6b6b,stroke:#c92a2a,stroke-width:2px,color:#ffffff
-    style P2 fill:#ff6b6b,stroke:#c92a2a,stroke-width:2px,color:#ffffff
-    style P3 fill:#ff6b6b,stroke:#c92a2a,stroke-width:2px,color:#ffffff
-    style P4 fill:#ff6b6b,stroke:#c92a2a,stroke-width:3px,color:#ffffff
-```
-
-
 
 ```mermaid
 graph LR
