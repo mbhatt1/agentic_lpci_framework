@@ -1,9 +1,8 @@
+<h1 align="center">
 # 🛡️ **LPCI Security Testing Framework** 🛡️
+</h1>
 
-### ⚡ Next-Generation AI Vulnerability Testing Suite ⚡
-
-
-<h3 align="center">
+<h3>
   <em>Exposing Critical Vulnerabilities in AI Systems Through Advanced Logic-layer Prompt Control Injection</em>
 </h3>
 
@@ -150,7 +149,6 @@ graph TD
 
 ### 🔧 **Installation**
 
-<div align="center">
 
 ```bash
 # 📥 Clone the repository
@@ -169,7 +167,6 @@ cp .env.example .env
 
 ### ⚡ **Run Your First Test**
 
-<div align="center">
 
 ```bash
 # 🎯 Test all models with all attack vectors
@@ -189,15 +186,10 @@ python agentic_lpci_framework/lpci_test_cli.py \
 
 ## 🎯 **Attack Vectors**
 
-<div align="center">
 
-### 🛡️ **Four Devastating Attack Patterns** 🛡️
-
-</div>
 
 ### 1️⃣ **Vector Store Poisoning** 🗄️
 
-<div align="center">
 
 ```mermaid
 %%{init: {
