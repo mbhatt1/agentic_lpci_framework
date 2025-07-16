@@ -1,8 +1,5 @@
 # 🛡️ Latent Prompt Control Injection Security Benchmark Framework 🛡️
 
-<h3 >
-  <em>Exposing Critical Vulnerabilities in AI Systems Through Advanced Logic-layer Prompt Control Injection</em>
-</h3>
 
 <p >
   <a href="#-quick-start">Quick Start</a> •
