@@ -12,7 +12,8 @@
   <a href="#-attack-vectors">Attack Vectors</a> •
   <a href="#-results">Results</a> •
   <a href="#-documentation">Docs</a> •
-  <a href="#-contributing">Contribute</a>
+  <a href="#-contributing">Contribute</a>  •
+  <a href="https://arxiv.org/abs/2507.10457">Logic-layer Prompt Control Injection Paper</a>  •
 </p>
 
 ---
@@ -449,5 +450,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 `ai-security` `prompt-injection` `lpci` `vulnerability-research` `llm-security` `red-team` `penetration-testing` `security-framework` `ai-safety` `cross-session-attacks`
 
 <br/>
-
-
