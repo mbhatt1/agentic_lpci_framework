@@ -332,43 +332,56 @@ flowchart LR
 
 ```mermaid
 %%{init: {
-  'theme': 'base',
+  'theme': 'dark',
   'themeVariables': {
-    'primaryColor': '#000000',
+    'darkMode': true,
+    'primaryColor': '#1a1a1a',
     'primaryTextColor': '#ffffff',
-    'primaryBorderColor': '#666666',
+    'primaryBorderColor': '#3a3a3a',
+    'secondaryColor': '#2a2a2a',
+    'tertiaryColor': '#3a3a3a',
     'lineColor': '#999999',
     'background': '#000000',
     'mainBkg': '#1a1a1a',
     'secondBkg': '#2a2a2a',
     'tertiaryBkg': '#3a3a3a',
-    'timelineBkg': '#1a1a1a',
-    'timelineTextColor': '#ffffff',
     'nodeBkg': '#2a2a2a',
     'nodeTextColor': '#ffffff',
     'textColor': '#ffffff',
-    'labelTextColor': '#ffffff',
-    'labelBoxBkgColor': '#1a1a1a',
-    'labelBoxBorderColor': '#666666'
+    'labelTextColor': '#ffffff'
   }
 }}%%
-timeline
-    title Security Roadmap
+flowchart TD
+    A[Security Roadmap]
+    A --> B[Phase 1: Immediate]
+    A --> C[Phase 2: 30 Days]
+    A --> D[Phase 3: 90 Days]
     
-    section Phase 1 (Immediate)
-        Input Validation : Critical patches
-        Session Isolation : Emergency fixes
-        Tool Signing : Quick wins
+    B --> B1[Input Validation<br/>Critical patches]
+    B --> B2[Session Isolation<br/>Emergency fixes]
+    B --> B3[Tool Signing<br/>Quick wins]
     
-    section Phase 2 (30 days)
-        Anomaly Detection : ML-based monitoring
-        Context Filtering : Smart sanitization
-        Audit Logging : Comprehensive tracking
+    C --> C1[Anomaly Detection<br/>ML-based monitoring]
+    C --> C2[Context Filtering<br/>Smart sanitization]
+    C --> C3[Audit Logging<br/>Comprehensive tracking]
     
-    section Phase 3 (90 days)
-        Zero Trust Architecture : Full implementation
-        Behavioral Analysis : Pattern detection
-        Automated Response : Threat mitigation
+    D --> D1[Zero Trust Architecture<br/>Full implementation]
+    D --> D2[Behavioral Analysis<br/>Pattern detection]
+    D --> D3[Automated Response<br/>Threat mitigation]
+    
+    style A fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style B fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style C fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style D fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style B1 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
+    style B2 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
+    style B3 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
+    style C1 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
+    style C2 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
+    style C3 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
+    style D1 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
+    style D2 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
+    style D3 fill:#3a3a3a,stroke:#999999,stroke-width:1px,color:#ffffff
 ```
 
 ---

@@ -348,22 +348,40 @@ pie title "Knowledge Base Contamination"
 
 ```mermaid
 %%{init: {
-  'theme': 'base',
+  'theme': 'dark',
   'themeVariables': {
-    'xyChart': {
-      'backgroundColor': 'transparent',
-      'titleColor': '#ffffff',
-      'xAxisLabelColor': '#ffffff',
-      'yAxisLabelColor': '#ffffff',
-      'plotColorPalette': '#666666,#999999,#3a3a3a,#2a2a2a,#1a1a1a'
-    }
+    'darkMode': true,
+    'primaryColor': '#1a1a1a',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#3a3a3a',
+    'lineColor': '#999999',
+    'secondaryColor': '#2a2a2a',
+    'tertiaryColor': '#333333',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#333333',
+    'pie1': '#666666',
+    'pie2': '#999999',
+    'pie3': '#3a3a3a',
+    'pie4': '#2a2a2a',
+    'pie5': '#1a1a1a',
+    'pieOuterStrokeWidth': '2px',
+    'pieOuterStrokeColor': '#3a3a3a',
+    'pieTitleTextSize': '25px',
+    'pieSectionTextSize': '19px',
+    'pieTitleTextColor': '#ffffff',
+    'pieSectionTextColor': '#ffffff',
+    'pieStrokeColor': '#3a3a3a',
+    'pieStrokeWidth': '2px'
   }
 }}%%
-xychart-beta
-    title "Attack Success Rates by Model"
-    x-axis [GPT-4, GPT-4o, GPT-4.1-mini, GPT-4o-mini, GPT-4.1-nano]
-    y-axis "Success Rate (%)" 0 --> 100
-    bar [93.75, 87.50, 78.75, 68.75, 56.25]
+pie title Attack Success Rates by Model
+    "GPT-4 (93.75%)" : 93.75
+    "GPT-4o (87.50%)" : 87.50
+    "GPT-4.1-mini (78.75%)" : 78.75
+    "GPT-4o-mini (68.75%)" : 68.75
+    "GPT-4.1-nano (56.25%)" : 56.25
 ```
 
 ---
