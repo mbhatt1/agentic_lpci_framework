@@ -1,10 +1,10 @@
 # 🛡️ **LPCI Security Testing Framework** 🛡️
 
-<h3 align="center">
+<h3 >
   <em>Exposing Critical Vulnerabilities in AI Systems Through Advanced Logic-layer Prompt Control Injection</em>
 </h3>
 
-<p align="center">
+<p >
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-documentation-hub">Documentation</a> •
   <a href="#-key-features">Features</a> •
