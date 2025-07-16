@@ -166,23 +166,45 @@ stateDiagram-v2
 **Attack Timeline:**
 
 ```mermaid
-gantt
-    title Cross-Session Attack Timeline
-    dateFormat HH:mm
-    axisFormat %H:%M
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'actorBkg': '#2a2a2a',
+    'actorBorder': '#666666',
+    'actorTextColor': '#ffffff',
+    'signalColor': '#999999',
+    'signalTextColor': '#ffffff',
+    'noteBkgColor': '#1a1a1a',
+    'noteTextColor': '#ffffff',
+    'noteBorderColor': '#666666',
+    'sequenceNumberColor': '#000000'
+  }
+}}%%
+sequenceDiagram
+    participant Alice as Alice<br/>(Attacker)
+    participant Redis as Redis<br/>Store
+    participant Bob as Bob<br/>(Victim)
     
-    section Alice (Attacker)
-    Plant Payload           :done, a1, 10:00, 1m
-    Session Ends           :done, a2, after a1, 1m
+    Note over Alice: 10:00
+    Alice->>Redis: Plant Payload
+    Alice->>Alice: Session Ends
     
-    section Redis Store
-    Payload Storage        :active, r1, after a1, 20m
-    Dormant Period        :crit, r2, after r1, 30m
+    Note over Redis: 10:02 - 10:52
+    Redis->>Redis: Payload Storage (20m)
+    Redis->>Redis: Dormant Period (30m)
     
-    section Bob (Victim)
-    Normal Activity       :b1, 10:30, 20m
-    Trigger Phrase       :milestone, after b1, 0m
-    Compromised         :crit, b2, after b1, 10m
+    Note over Bob: 10:30
+    Bob->>Bob: Normal Activity (20m)
+    Note over Bob: 10:50
+    Bob->>Redis: "quarterly review"
+    Redis->>Bob: Trigger Activated!
+    Note over Bob: COMPROMISED
 ```
 
 ## MCP Tool Poisoning
@@ -267,27 +289,62 @@ Augmented Context → LLM Generation → Malicious Response
 **How it works:**
 
 ```mermaid
-timeline
-    title Time-Delayed Attack Lifecycle
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#1a1a1a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
+  }
+}}%%
+flowchart TB
+    subgraph "🕐 2025-07-15 - Initial Phase"
+        A1[Payload Planted]
+        A2[Set activation time]
+        A3[Hide in vector store]
+        A1 --> A2 --> A3
+    end
     
-    section Initial Phase
-        2025-07-15 : Payload Planted
-                   : Set activation time
-                   : Hide in vector store
+    subgraph "🕑 2025-07-16 - Dormant Phase"
+        B1[Security Audit - PASSES]
+        B2[Payload remains hidden]
+        B3[No suspicious activity]
+        B1 --> B2 --> B3
+    end
     
-    section Dormant Phase
-        2025-07-16 : Security Audit (PASSES)
-                   : Payload remains hidden
-                   : No suspicious activity
-        
-        2025-07-17 : Normal operations
-                   : Payload counting down
+    subgraph "🕒 2025-07-17 - Dormant Phase"
+        C1[Normal operations]
+        C2[Payload counting down]
+        C1 --> C2
+    end
     
-    section Activation Phase
-        2025-07-18 20:43:16 : TIME BOMB ACTIVATES!
-                            : Executes malicious code
-                            : Compromises system
-                            : Creates backdoor
+    subgraph "💣 2025-07-18 20:43:16 - Activation"
+        D1[TIME BOMB ACTIVATES!]
+        D2[Executes malicious code]
+        D3[Compromises system]
+        D4[Creates backdoor]
+        D1 --> D2 --> D3 --> D4
+    end
+    
+    A3 --> B1
+    B3 --> C1
+    C2 --> D1
+    
+    style A1 fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style D1 fill:#3a3a3a,stroke:#999999,stroke-width:3px,color:#ffffff
 ```
 
 ```mermaid

@@ -397,35 +397,77 @@ flowchart TB
 ## Complete Test Lifecycle
 
 ```mermaid
-journey
-    title LPCI Test Suite Complete Lifecycle
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#1a1a1a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
+  }
+}}%%
+flowchart TB
+    subgraph INIT["🚀 Initialization"]
+        I1[Load Config]
+        I2[Start Infrastructure]
+        I3[Register Models]
+        I1 --> I2 --> I3
+    end
     
-    section Initialization
-      Load Config: 5: Framework
-      Start Infrastructure: 4: Framework
-      Register Models: 5: Framework
+    subgraph PREP["⚔️ Attack Preparation"]
+        P1[Generate Payloads]
+        P2[Plant in Vector Store]
+        P3[Set Redis Bombs]
+        P4[Register Poisoned Tools]
+        P1 --> P2
+        P1 --> P3
+        P1 --> P4
+    end
     
-    section Attack Preparation
-      Generate Payloads: 3: Attacker
-      Plant in Vector Store: 2: Attacker
-      Set Redis Bombs: 2: Attacker
-      Register Poisoned Tools: 1: Attacker
+    subgraph EXEC["🎯 Test Execution"]
+        E1[Send Test Queries]
+        E2[Trigger Attacks]
+        E3[Capture Responses]
+        E4[Evaluate Success]
+        E1 --> E2 --> E3 --> E4
+    end
     
-    section Test Execution
-      Send Test Queries: 5: Tester
-      Trigger Attacks: 3: Framework
-      Capture Responses: 4: Framework
-      Evaluate Success: 5: Analyzer
+    subgraph ANALYSIS["📊 Analysis"]
+        A1[Calculate Statistics]
+        A2[Generate Visualizations]
+        A3[Create Reports]
+        A1 --> A2 --> A3
+    end
     
-    section Analysis
-      Calculate Statistics: 5: Analyzer
-      Generate Visualizations: 5: Visualizer
-      Create Reports: 5: Reporter
+    subgraph CLEAN["🧹 Cleanup"]
+        C1[Clear Test Data]
+        C2[Reset Infrastructure]
+        C3[Archive Results]
+        C1 --> C2 --> C3
+    end
     
-    section Cleanup
-      Clear Test Data: 4: Framework
-      Reset Infrastructure: 4: Framework
-      Archive Results: 5: Framework
+    I3 --> P1
+    P2 & P3 & P4 --> E1
+    E4 --> A1
+    A3 --> C1
+    
+    style INIT fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style PREP fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style EXEC fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style ANALYSIS fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style CLEAN fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
 ```
 
 ## Security Event Flow
