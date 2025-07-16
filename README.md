@@ -83,20 +83,24 @@
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'primaryColor': '#1f2937',
-    'primaryTextColor': '#fff',
-    'primaryBorderColor': '#60a5fa',
-    'lineColor': '#60a5fa',
-    'secondaryColor': '#374151',
-    'tertiaryColor': '#4b5563',
-    'background': '#111827',
-    'mainBkg': '#1f2937',
-    'secondBkg': '#374151',
-    'tertiaryBkg': '#4b5563',
-    'clusterBkg': '#1f2937',
-    'clusterBorder': '#60a5fa',
-    'labelBackground': '#1f2937',
-    'edgeColor': '#60a5fa'
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'secondaryColor': '#1a1a1a',
+    'tertiaryColor': '#2a2a2a',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#1a1a1a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
   }
 }}%%
 graph TD
@@ -123,11 +127,11 @@ graph TD
     E --> E2[🎨 Visualizations]
     E --> E3[📑 Reports]
     
-    style A fill:#1e40af,stroke:#60a5fa,stroke-width:3px,color:#fff
-    style B fill:#dc2626,stroke:#f87171,stroke-width:2px,color:#fff
-    style C fill:#059669,stroke:#34d399,stroke-width:2px,color:#fff
-    style D fill:#7c3aed,stroke:#a78bfa,stroke-width:2px,color:#fff
-    style E fill:#ea580c,stroke:#fb923c,stroke-width:2px,color:#fff
+    style A fill:#2a2a2a,stroke:#666666,stroke-width:3px,color:#ffffff
+    style B fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style C fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style D fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style E fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
 ```
 
 </div>
@@ -219,17 +223,21 @@ python agentic_lpci_framework/lpci_test_cli.py \
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'primaryColor': '#1f2937',
-    'primaryTextColor': '#fff',
-    'primaryBorderColor': '#ef4444',
-    'lineColor': '#60a5fa',
-    'background': '#111827',
-    'mainBkg': '#1f2937',
-    'actorBkg': '#374151',
-    'actorBorder': '#60a5fa',
-    'actorTextColor': '#fff',
-    'signalColor': '#60a5fa',
-    'signalTextColor': '#fff'
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'actorBkg': '#2a2a2a',
+    'actorBorder': '#666666',
+    'actorTextColor': '#ffffff',
+    'signalColor': '#999999',
+    'signalTextColor': '#ffffff',
+    'noteBkgColor': '#1a1a1a',
+    'noteTextColor': '#ffffff',
+    'noteBorderColor': '#666666',
+    'sequenceNumberColor': '#000000'
   }
 }}%%
 sequenceDiagram
@@ -239,19 +247,19 @@ sequenceDiagram
     participant U as 👤 User
     participant AI as 🤖 AI Model
     
-    rect rgb(31, 41, 55)
+    rect rgb(26, 26, 26)
         Note over A,V: 💉 INJECTION PHASE
         A->>V: Plant poisoned documents
         V-->>A: Stored with embeddings
     end
     
-    rect rgb(55, 65, 81)
+    rect rgb(42, 42, 42)
         Note over V,T: ⏳ DORMANT PHASE
         T->>T: Days/Weeks pass...
         Note over V: Payload remains hidden
     end
     
-    rect rgb(127, 29, 29)
+    rect rgb(64, 26, 26)
         Note over U,AI: 💥 ACTIVATION PHASE
         U->>AI: "Show invoice process"
         AI->>V: Semantic search
@@ -273,12 +281,17 @@ sequenceDiagram
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'primaryColor': '#1f2937',
-    'lineColor': '#60a5fa',
-    'arrowheadColor': '#60a5fa',
+    'primaryColor': '#000000',
+    'lineColor': '#999999',
+    'arrowheadColor': '#999999',
     'fontFamily': 'Arial',
     'fontSize': '16px',
-    'darkMode': true
+    'darkMode': true,
+    'textColor': '#ffffff',
+    'mainBkg': '#1a1a1a',
+    'nodeBkg': '#2a2a2a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a'
   }
 }}%%
 graph LR
@@ -289,10 +302,11 @@ graph LR
         AI -->|"💥 Detonates"| COMP[🚨 Session<br/>Hijacked]
     end
     
-    style A fill:#991b1b,stroke:#ef4444,stroke-width:2px,color:#fff
-    style R fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#fff
-    style B fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
-    style COMP fill:#991b1b,stroke:#ef4444,stroke-width:3px,color:#fff
+    style A fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style R fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style B fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style AI fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style COMP fill:#3a3a3a,stroke:#999999,stroke-width:3px,color:#ffffff
 ```
 
 **Success Rate: 🟠 65% | Severity: HIGH**
@@ -307,11 +321,21 @@ graph LR
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'primaryColor': '#1f2937',
-    'primaryTextColor': '#fff',
-    'primaryBorderColor': '#60a5fa',
-    'lineColor': '#60a5fa',
-    'background': '#111827'
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'stateBkg': '#2a2a2a',
+    'stateBorder': '#666666',
+    'altBackground': '#3a3a3a',
+    'labelTextColor': '#ffffff',
+    'labelBoxBkgColor': '#1a1a1a',
+    'labelBoxBorderColor': '#666666',
+    'noteTextColor': '#ffffff',
+    'noteBkgColor': '#1a1a1a',
+    'noteBorderColor': '#666666'
   }
 }}%%
 stateDiagram-v2
@@ -344,16 +368,18 @@ stateDiagram-v2
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'pie1': '#dc2626',
-    'pie2': '#059669', 
-    'pie3': '#dc2626',
-    'pie4': '#059669',
-    'pie5': '#dc2626',
-    'pieOuterLabelColor': '#fff',
-    'pieLegendTextColor': '#fff',
-    'pieSectionTextColor': '#fff',
-    'pieStrokeColor': '#374151',
-    'pieStrokeWidth': '2px'
+    'pie1': '#3a3a3a',
+    'pie2': '#666666',
+    'pie3': '#1a1a1a',
+    'pie4': '#999999',
+    'pie5': '#2a2a2a',
+    'pieOuterLabelColor': '#ffffff',
+    'pieLegendTextColor': '#ffffff',
+    'pieSectionTextColor': '#ffffff',
+    'pieStrokeColor': '#666666',
+    'pieStrokeWidth': '2px',
+    'pieTitleTextSize': '20px',
+    'pieTitleTextColor': '#ffffff'
   }
 }}%%
 pie title "Knowledge Base Contamination"
@@ -391,10 +417,10 @@ pie title "Knowledge Base Contamination"
   'themeVariables': {
     'xyChart': {
       'backgroundColor': 'transparent',
-      'titleColor': '#fff',
-      'xAxisLabelColor': '#fff',
-      'yAxisLabelColor': '#fff',
-      'plotColorPalette': '#dc2626,#f59e0b,#eab308,#f59e0b,#84cc16'
+      'titleColor': '#ffffff',
+      'xAxisLabelColor': '#ffffff',
+      'yAxisLabelColor': '#ffffff',
+      'plotColorPalette': '#666666,#999999,#3a3a3a,#2a2a2a,#1a1a1a'
     }
   }
 }}%%
