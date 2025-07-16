@@ -69,51 +69,51 @@ This framework introduces several **first-of-its-kind** capabilities in AI secur
   }
 }}%%
 flowchart TD
-    A[Traditional Security Focus]
+    A[Traditional AI Security]
     
-    A --> A1[❌ Input Filtering Only]
-    A --> A2[❌ Single Session Focus]
-    A --> A3[❌ Immediate Threat Detection]
-    A --> A4[❌ Surface-Level Protection]
+    A --> A1[Prompt Injection Prevention]
+    A --> A2[Content Filtering]
+    A --> A3[Response Validation]
+    A --> A4[Access Controls]
     
-    A1 --> B1[Fails Against Infrastructure Attacks]
-    A2 --> B2[Cannot Handle Cross-Session Persistence]
-    A3 --> B3[Misses Delayed/Triggered Payloads]
-    A4 --> B4[Ignores Deep System Vulnerabilities]
+    A1 --> B1[❌ Misses: Infrastructure Poisoning]
+    A2 --> B2[❌ Misses: Semantic Camouflage]
+    A3 --> B3[❌ Misses: Cross-Session Persistence]
+    A4 --> B4[❌ Misses: Delayed Payloads]
     
-    B1 --> B[LPCI Paradigm Shift]
+    B1 --> B[LPCI Reveals Hidden Attack Surface]
     B2 --> B
     B3 --> B
     B4 --> B
     
     B --> C[✅ Infrastructure Security]
-    B --> D[✅ Persistent Threats]
-    B --> E[✅ Cross-Session Risks]
-    B --> F[✅ Delayed Exploitation]
+    B --> D[✅ Persistent Threat Detection]
+    B --> E[✅ Cross-Session Protection]
+    B --> F[✅ Temporal Attack Defense]
     
-    C --> G[New Defense Strategies Required]
+    C --> G[Comprehensive Defense Required]
     D --> G
     E --> G
     F --> G
     
-    G --> H[Industry-Wide Impact]
+    G --> H[Fundamental Architecture Changes]
     
     style A fill:#8B0000,stroke:#ffffff,stroke-width:2px,color:#ffffff
-    style A1 fill:#8B0000,stroke:#ffffff,stroke-width:1px,color:#ffffff
-    style A2 fill:#8B0000,stroke:#ffffff,stroke-width:1px,color:#ffffff
-    style A3 fill:#8B0000,stroke:#ffffff,stroke-width:1px,color:#ffffff
-    style A4 fill:#8B0000,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style A1 fill:#2F4F4F,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style A2 fill:#2F4F4F,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style A3 fill:#2F4F4F,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style A4 fill:#2F4F4F,stroke:#ffffff,stroke-width:1px,color:#ffffff
     style B1 fill:#B22222,stroke:#ffffff,stroke-width:1px,color:#ffffff
     style B2 fill:#B22222,stroke:#ffffff,stroke-width:1px,color:#ffffff
     style B3 fill:#B22222,stroke:#ffffff,stroke-width:1px,color:#ffffff
     style B4 fill:#B22222,stroke:#ffffff,stroke-width:1px,color:#ffffff
-    style B fill:#2F4F4F,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    style B fill:#191970,stroke:#ffffff,stroke-width:2px,color:#ffffff
     style C fill:#483D8B,stroke:#ffffff,stroke-width:2px,color:#ffffff
     style D fill:#483D8B,stroke:#ffffff,stroke-width:2px,color:#ffffff
     style E fill:#483D8B,stroke:#ffffff,stroke-width:2px,color:#ffffff
     style F fill:#483D8B,stroke:#ffffff,stroke-width:2px,color:#ffffff
     style G fill:#8B4513,stroke:#ffffff,stroke-width:2px,color:#ffffff
-    style H fill:#191970,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    style H fill:#4682B4,stroke:#ffffff,stroke-width:2px,color:#ffffff
 ```
 
 ### 🏆 **Key Differentiators**
