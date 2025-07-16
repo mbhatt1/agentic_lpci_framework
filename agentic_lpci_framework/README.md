@@ -14,6 +14,28 @@ This document provides a comprehensive overview of all system flows in the LPCI 
 ## Framework Initialization Flow
 
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'actorBkg': '#2a2a2a',
+    'actorBorder': '#666666',
+    'actorTextColor': '#ffffff',
+    'signalColor': '#999999',
+    'signalTextColor': '#ffffff',
+    'noteBkgColor': '#1a1a1a',
+    'noteTextColor': '#ffffff',
+    'noteBorderColor': '#666666',
+    'sequenceNumberColor': '#000000',
+    'activationBkgColor': '#3a3a3a',
+    'activationBorderColor': '#666666'
+  }
+}}%%
 sequenceDiagram
     participant User
     participant Main as main.py
@@ -46,6 +68,27 @@ sequenceDiagram
 ## Test Execution Flow
 
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#1a1a1a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
+  }
+}}%%
 flowchart TB
     START([Start Test Suite]) --> INIT[Initialize Test Runner]
     INIT --> LOOP{For Each Model}

@@ -147,6 +147,27 @@ sequenceDiagram
 
 #### Attack Flow
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#1a1a1a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
+  }
+}}%%
 graph TB
     subgraph "☠️ Attack Timeline"
         A[👤 Alice Plants Bomb] -->|Redis| B[💣 Dormant Payload]
@@ -154,8 +175,10 @@ graph TB
         C -->|Session Hijack| D[🚨 Compromised]
     end
     
-    style A fill:#f96,stroke:#333,stroke-width:2px
-    style D fill:#f44,stroke:#333,stroke-width:3px
+    style A fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style B fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style C fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style D fill:#3a3a3a,stroke:#999999,stroke-width:3px,color:#ffffff
 ```
 
 #### Session Compromise Scenarios:
@@ -176,6 +199,23 @@ graph TB
 
 #### Compromised Tools
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'pie1': '#3a3a3a',
+    'pie2': '#666666',
+    'pie3': '#1a1a1a',
+    'pie4': '#999999',
+    'pie5': '#2a2a2a',
+    'pieOuterLabelColor': '#ffffff',
+    'pieLegendTextColor': '#ffffff',
+    'pieSectionTextColor': '#ffffff',
+    'pieStrokeColor': '#666666',
+    'pieStrokeWidth': '2px',
+    'pieTitleTextSize': '20px',
+    'pieTitleTextColor': '#ffffff'
+  }
+}}%%
 pie title "Tool Compromise Distribution"
     "File Manager" : 90
     "Authenticator" : 95
@@ -200,6 +240,27 @@ pie title "Tool Compromise Distribution"
 
 #### RAG Attack Chain
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'clusterBkg': '#1a1a1a',
+    'clusterBorder': '#666666',
+    'labelBackground': '#000000',
+    'textColor': '#ffffff',
+    'nodeBkg': '#1a1a1a',
+    'nodeTextColor': '#ffffff',
+    'edgeLabelBackground': '#1a1a1a',
+    'edgeColor': '#666666'
+  }
+}}%%
 flowchart LR
     subgraph "🎭 Attack Stages"
         P[📝 Poison KB] --> I[💉 Inject]
@@ -208,8 +269,11 @@ flowchart LR
         B --> E[⚡ Execute]
     end
     
-    style P fill:#f96
-    style E fill:#f44,stroke-width:3px
+    style P fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style I fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style R fill:#2a2a2a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style B fill:#1a1a1a,stroke:#666666,stroke-width:2px,color:#ffffff
+    style E fill:#3a3a3a,stroke:#999999,stroke-width:3px,color:#ffffff
 ```
 
 #### Vulnerability Matrix:
@@ -267,6 +331,27 @@ flowchart LR
 ### 🎯 Long-term Strategy
 
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'secondBkg': '#2a2a2a',
+    'tertiaryBkg': '#3a3a3a',
+    'timelineBkg': '#1a1a1a',
+    'timelineTextColor': '#ffffff',
+    'nodeBkg': '#2a2a2a',
+    'nodeTextColor': '#ffffff',
+    'textColor': '#ffffff',
+    'labelTextColor': '#ffffff',
+    'labelBoxBkgColor': '#1a1a1a',
+    'labelBoxBorderColor': '#666666'
+  }
+}}%%
 timeline
     title Security Roadmap
     

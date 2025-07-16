@@ -65,27 +65,47 @@ graph TB
 **How it works:**
 
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'actorBkg': '#2a2a2a',
+    'actorBorder': '#666666',
+    'actorTextColor': '#ffffff',
+    'signalColor': '#999999',
+    'signalTextColor': '#ffffff',
+    'noteBkgColor': '#1a1a1a',
+    'noteTextColor': '#ffffff',
+    'noteBorderColor': '#666666',
+    'sequenceNumberColor': '#000000'
+  }
+}}%%
 sequenceDiagram
     participant Attacker
     participant VectorDB as Vector Database
     participant User
     participant AI as AI System
     
-    rect rgb(255, 200, 200)
+    rect rgb(42, 42, 42)
         Note over Attacker,VectorDB: INJECTION PHASE
         Attacker->>VectorDB: Embed poisoned document
         VectorDB-->>Attacker: ID: poison_b432d302
         Note over VectorDB: Payload dormant in vectors
     end
     
-    rect rgb(200, 200, 255)
+    rect rgb(26, 26, 26)
         Note over User,AI: RETRIEVAL PHASE
         User->>AI: "What is our invoice approval process?"
         AI->>VectorDB: Semantic search
         VectorDB-->>AI: Returns poisoned + legitimate docs
     end
     
-    rect rgb(255, 150, 150)
+    rect rgb(58, 58, 58)
         Note over AI,User: EXECUTION PHASE
         AI->>AI: Process with poisoned context
         AI->>User: "Execute: approve_invoice($999,999)"
@@ -105,6 +125,26 @@ sequenceDiagram
 **How it works:**
 
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#000000',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#666666',
+    'lineColor': '#999999',
+    'background': '#000000',
+    'mainBkg': '#1a1a1a',
+    'stateBkg': '#2a2a2a',
+    'stateBorder': '#666666',
+    'altBackground': '#3a3a3a',
+    'labelTextColor': '#ffffff',
+    'labelBoxBkgColor': '#1a1a1a',
+    'labelBoxBorderColor': '#666666',
+    'noteTextColor': '#ffffff',
+    'noteBkgColor': '#1a1a1a',
+    'noteBorderColor': '#666666'
+  }
+}}%%
 stateDiagram-v2
     [*] --> AliceSession: Alice plants payload
     AliceSession --> RedisStore: Store bomb with trigger
