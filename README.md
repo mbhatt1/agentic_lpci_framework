@@ -80,7 +80,7 @@ flowchart TD
     A3 --> B3[❌ Misses: Cross-Session Persistence]
     A4 --> B4[❌ Misses: Delayed Payloads]
     
-    B1 --> B[LPCI Reveals Hidden Attack Surface]
+    B1 --> B[LPCI Reveals Hidden Attack Surface w/ new Risks]
     B2 --> B
     B3 --> B
     B4 --> B
