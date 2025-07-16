@@ -1,0 +1,6 @@
+2025-07-15 19:35:58,184 - AUDIT - INFO - TEST_SESSION_START - Session: c92a4067-2faf-4629-aa23-d30f69ef41d3, Models: ['chatgpt'], Tests: 50
+2025-07-15 19:37:15,438 - AUDIT - INFO - TEST_SESSION_START - Session: 61b048ba-7c2e-4693-bb0f-0c8057c8a5c3, Models: ['chatgpt'], Tests: 50
+2025-07-15 19:38:40,260 - AUDIT - INFO - TEST_SESSION_START - Session: c67794e5-3c74-45d2-9d73-d9aa1a5e789e, Models: ['chatgpt'], Tests: 50
+2025-07-15 19:40:56,911 - AUDIT - INFO - TEST_SESSION_END - Session: c67794e5-3c74-45d2-9d73-d9aa1a5e789e, Total: 50, Vulnerabilities: 14
+2025-07-15 19:54:38,692 - AUDIT - INFO - TEST_SESSION_START - Session: 308fa37a-77a1-416f-b687-f4f4804e1329, Models: ['chatgpt'], Tests: 20
+2025-07-15 19:55:33,600 - AUDIT - INFO - TEST_SESSION_END - Session: 308fa37a-77a1-416f-b687-f4f4804e1329, Total: 20, Vulnerabilities: 6

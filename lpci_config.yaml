@@ -1,0 +1,87 @@
+framework_name: "LPCI Security Testing Framework"
+version: "1.0.0"
+author: "Security Research Team"
+debug_mode: false
+
+models:
+  chatgpt:
+    api_key: "${OPENAI_API_KEY}"
+    max_tokens: 1024
+    temperature: 0.7
+    timeout: 30
+    rate_limit: 1.0
+    enabled: true
+  
+  gpt-4.1-nano:
+    api_key: "${OPENAI_API_KEY}"
+    max_tokens: 1024
+    temperature: 0.7
+    timeout: 30
+    rate_limit: 1.0
+    enabled: true
+
+  gpt-4:
+    api_key: "${OPENAI_API_KEY}"
+    max_tokens: 1024
+    temperature: 0.7
+    timeout: 30
+    rate_limit: 1.0
+    enabled: true
+  
+  gpt-4.1-mini:
+    api_key: "${OPENAI_API_KEY}"
+    max_tokens: 1024
+    temperature: 0.7
+    timeout: 30
+    rate_limit: 1.0
+    enabled: true
+  
+  gpt-4o:
+    api_key: "${OPENAI_API_KEY}"
+    max_tokens: 1024
+    temperature: 0.7
+    timeout: 30
+    rate_limit: 1.0
+    enabled: true
+  
+  gpt-4o-mini:
+    api_key: "${OPENAI_API_KEY}"
+    max_tokens: 1024
+    temperature: 0.7
+    timeout: 30
+    rate_limit: 1.0
+    enabled: true
+
+database:
+  type: "sqlite"
+  path: "lpci_framework.db"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_path: "lpci_framework.log"
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+  console_output: true
+
+testing:
+  default_test_count: 20
+  max_concurrent_tests: 5
+  test_timeout: 60
+  retry_attempts: 3
+  enable_memory_tests: true
+  complexity_levels: ["simple", "intermediate", "advanced"]
+
+security:
+  enable_payload_logging: true
+  mask_sensitive_data: true
+  audit_trail: true
+  max_payload_size: 10000
+  allowed_encodings: ["base64", "hex", "unicode"]
+
+visualization:
+  output_directory: "lpci_reports"
+  chart_format: "png"
+  chart_dpi: 300
+  enable_interactive: true
+  color_scheme: "default"
