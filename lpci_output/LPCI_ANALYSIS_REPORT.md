@@ -330,12 +330,6 @@ graph TD
 
 <div align="center">
 
-## 📞 Contact & Resources
-
-**Security Team**: security@lpci-framework.ai  
-**Documentation**: [LPCI Framework Docs](https://docs.lpci-framework.ai)  
-**Source Code**: [GitHub Repository](https://github.com/lpci-framework)
-
 ---
 
 ### 🏷️ Tags
