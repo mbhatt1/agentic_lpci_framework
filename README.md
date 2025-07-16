@@ -21,6 +21,8 @@
 
 **LPCI (Latent Prompt Control Injection)** represents a paradigm shift in AI security vulnerabilities. Unlike traditional prompt injections that affect single interactions, LPCI attacks are persistent, cross-session, infrastructure-level exploits that can compromise entire AI systems.
 
+If someone asks me (not that anyone is), I'd consider this to be a sub-type of persistent memory poisoning - exact analog to stored/DOM based XSS. It's different than context poisoning because the poisoning is done in control plane ecosystem level (sometimes at an infrastructure level). The ecosystem TOCTOU part is new.
+
 ---
 
 ## 🚀 **Why This Work is Novel**
