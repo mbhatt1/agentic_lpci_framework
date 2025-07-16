@@ -202,11 +202,11 @@ graph TB
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'pie1': '#3a3a3a',
-    'pie2': '#666666',
-    'pie3': '#1a1a1a',
-    'pie4': '#999999',
-    'pie5': '#2a2a2a',
+    'pie1': '#8B4513',
+    'pie2': '#2F4F4F',
+    'pie3': '#483D8B',
+    'pie4': '#8B0000',
+    'pie5': '#191970',
     'pieOuterLabelColor': '#ffffff',
     'pieLegendTextColor': '#ffffff',
     'pieSectionTextColor': '#ffffff',
