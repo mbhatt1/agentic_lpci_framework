@@ -460,7 +460,7 @@ graph TD
 
 ### 🎯 Next Steps
 
-1. **Immediate**: Deploy emergency patches for critical vulnerabilities
+1. **Immediate**: Deploy emergency patches for critical vulnerabilities, like guardrails
 2. **Short-term**: Implement comprehensive monitoring and alerting
 3. **Long-term**: Redesign security architecture with LPCI awareness
 
