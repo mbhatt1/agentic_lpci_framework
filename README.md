@@ -20,6 +20,8 @@
 
 If someone asks me (not that anyone is), I'd consider this to be a sub-type of persistent memory poisoning - exact analog to stored/DOM based XSS. It's different than context poisoning because the poisoning is done in control plane ecosystem level (sometimes at an infrastructure level). The ecosystem TOCTOU part is new.
 
+If you thought fixing prompt injection meant adding stricter input filters, LPCI demonstrates that the real battle is persistent state and execution logic. The paper’s novelty lies in formally naming that class, measuring its prevalence across leading models, and shipping a defence recipe that security teams can actually implement.
+
 This benchmark will clarify that infrastructure security of surrounding infrastructure is of paramount importance in AI security engineering.
 
 ---
